@@ -1,1 +1,42 @@
-<button onclick="location.href = 'index2.html';" id="myButton" class="float-left submit-button" >Home</button>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .center-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .center-box button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.href = 'index2.html';" id="myButton" class="float-left submit-button">Home</button>
+
+    <div class="center-box">
+        <label for="label1">Label 1</label>
+        <button id="button1">Button 1</button>
+        <label for="label2">Label 2</label>
+        <button id="button2">Button 2</button>
+    </div>
+</body>
+</html>
