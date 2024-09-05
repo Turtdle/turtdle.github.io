@@ -1,0 +1,3280 @@
+{/* Homepage */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 60px 120px;
+gap: 60px;
+
+position: relative;
+width: 1440px;
+height: 1804.07px;
+
+background: #F7F8F9;
+
+
+/* header */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 48px;
+
+width: 1200px;
+height: 73px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* LOGO */
+
+width: 172px;
+height: 73px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 73px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* search bar */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 16px;
+gap: 16px;
+
+width: 748px;
+height: 48px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* lucide/search */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #000000;
+
+
+/* Search the latest beauty products */
+
+width: 676px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* ctas */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 184px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* cta */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+width: 73px;
+height: 42px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Log in */
+
+width: 53px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* cta */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+width: 87px;
+height: 42px;
+
+background: #266DC6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Sign up */
+
+width: 67px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* hero container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px;
+gap: 24px;
+
+width: 1200px;
+height: 442.07px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* hero cta wrap */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 48px;
+
+width: 1104px;
+height: 346.07px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* value prop header */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 678px;
+height: 346.07px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 13 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 678px;
+height: 128px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Industry-vetted videos */
+
+width: 533px;
+height: 58px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Product expertise in seconds */
+
+width: 678px;
+height: 58px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Finding helpful product review videos takes time. We do it for you in seconds. Get up to speed on the latest beauty products from industry-vetted videos that actually help you decide what’s right for you. */
+
+width: 678px;
+height: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* cta */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+width: 87px;
+height: 42px;
+
+background: #266DC6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Sign up */
+
+width: 67px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Social media, Delivery, Business _ fast, speed, account, graph, success, happy */
+
+width: 320px;
+height: 346.07px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 70.93%;
+right: 23.79%;
+top: 15.06%;
+bottom: 61.96%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_2 */
+
+position: absolute;
+left: 71.38%;
+right: 24.19%;
+top: 17.42%;
+bottom: 78.53%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_3 */
+
+position: absolute;
+left: 73.44%;
+right: 26.3%;
+top: 18.29%;
+bottom: 80.87%;
+
+background: #D7E8F0;
+
+
+/* Vector_4 */
+
+position: absolute;
+left: 73.2%;
+right: 26.06%;
+top: 19.36%;
+bottom: 79.4%;
+
+background: #D7E8F0;
+
+
+/* Vector_5 */
+
+position: absolute;
+left: 72.89%;
+right: 25.7%;
+top: 25.8%;
+bottom: 69.7%;
+
+background: #D7E8F0;
+
+
+/* Vector_6 */
+
+position: absolute;
+left: 71.82%;
+right: 24.73%;
+top: 23.27%;
+bottom: 76.73%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_7 */
+
+position: absolute;
+left: 71.82%;
+right: 24.73%;
+top: 24.35%;
+bottom: 75.65%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_8 */
+
+position: absolute;
+left: 71.82%;
+right: 24.73%;
+top: 31.33%;
+bottom: 68.67%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_9 */
+
+position: absolute;
+left: 72.62%;
+right: 25.53%;
+top: 32.35%;
+bottom: 67.65%;
+
+border: 1.73036px solid #CCDDE2;
+
+
+/* Vector_10 */
+
+position: absolute;
+left: 87.04%;
+right: 6.08%;
+top: 33.86%;
+bottom: 32.25%;
+
+background: #266DC6;
+
+
+/* Vector_11 */
+
+position: absolute;
+left: 81.42%;
+right: 13.3%;
+top: 33.86%;
+bottom: 32.25%;
+
+background: #266DC6;
+
+
+/* Vector_12 */
+
+position: absolute;
+left: 80.55%;
+right: 5.32%;
+top: 31.78%;
+bottom: 14.99%;
+
+background: #266DC6;
+
+
+/* Vector_13 */
+
+position: absolute;
+left: 80.04%;
+right: 5.51%;
+top: 32.49%;
+bottom: 15.72%;
+
+background: #266DC6;
+
+
+/* Vector_14 */
+
+position: absolute;
+left: 80.55%;
+right: 5.32%;
+top: 31.78%;
+bottom: 15.02%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_15 */
+
+position: absolute;
+left: 81.42%;
+right: 6.08%;
+top: 70.24%;
+bottom: 17.61%;
+
+background: #FFFFFF;
+
+
+/* Vector_16 */
+
+position: absolute;
+left: 82.21%;
+right: 10.21%;
+top: 72.95%;
+bottom: 20.14%;
+
+background: #266DC6;
+
+
+/* Vector_17 */
+
+position: absolute;
+left: 88.03%;
+right: 11.52%;
+top: 74.43%;
+bottom: 24.14%;
+
+background: #FFFFFF;
+
+
+/* Vector_18 */
+
+position: absolute;
+left: 87.63%;
+right: 11.12%;
+top: 76.38%;
+bottom: 21.62%;
+
+background: #FFFFFF;
+
+
+/* Vector_19 */
+
+position: absolute;
+left: 90.6%;
+right: 7.19%;
+top: 72.95%;
+bottom: 20.01%;
+
+background: #266DC6;
+
+
+/* Vector_20 */
+
+position: absolute;
+left: 88.26%;
+right: 7.11%;
+top: 50.12%;
+bottom: 35.1%;
+
+background: #FFFFFF;
+
+
+/* Vector_21 */
+
+position: absolute;
+left: 91.2%;
+right: 7.06%;
+top: 49.54%;
+bottom: 44.96%;
+
+background: #FFFFFF;
+
+
+/* Vector_22 */
+
+position: absolute;
+left: 89.91%;
+right: 8.82%;
+top: 36.43%;
+bottom: 59.51%;
+
+background: #D7E8F0;
+
+
+/* Vector_23 */
+
+position: absolute;
+left: 88.26%;
+right: 7.11%;
+top: 42.95%;
+bottom: 56.65%;
+
+background: #D7E8F0;
+
+
+/* Vector_24 */
+
+position: absolute;
+left: 88.26%;
+right: 7.11%;
+top: 44.45%;
+bottom: 55.14%;
+
+background: #D7E8F0;
+
+
+/* Vector_25 */
+
+position: absolute;
+left: 88.26%;
+right: 7.11%;
+top: 45.82%;
+bottom: 53.77%;
+
+background: #D7E8F0;
+
+
+/* Vector_26 */
+
+position: absolute;
+left: 82.26%;
+right: 14.11%;
+top: 51.44%;
+bottom: 48.15%;
+
+background: #D7E8F0;
+
+
+/* Vector_27 */
+
+position: absolute;
+left: 82.26%;
+right: 14.11%;
+top: 53.08%;
+bottom: 46.51%;
+
+background: #D7E8F0;
+
+
+/* Vector_28 */
+
+position: absolute;
+left: 82.26%;
+right: 14.11%;
+top: 54.72%;
+bottom: 44.87%;
+
+background: #D7E8F0;
+
+
+/* Vector_29 */
+
+position: absolute;
+left: 82.26%;
+right: 14.11%;
+top: 56.37%;
+bottom: 43.23%;
+
+background: #D7E8F0;
+
+
+/* Vector_30 */
+
+position: absolute;
+left: 82.26%;
+right: 14.11%;
+top: 58.01%;
+bottom: 41.59%;
+
+background: #D7E8F0;
+
+
+/* Vector_31 */
+
+position: absolute;
+left: 81.76%;
+right: 10.71%;
+top: 29.74%;
+bottom: 50.72%;
+
+background: #FFFFFF;
+
+
+/* Vector_32 */
+
+position: absolute;
+left: 78.85%;
+right: 12.34%;
+top: 48.41%;
+bottom: 8.87%;
+
+background: #FFFFFF;
+
+
+/* Vector_33 */
+
+position: absolute;
+left: 65.76%;
+right: 31.17%;
+top: 60.44%;
+bottom: 28%;
+
+background: #2E2E2E;
+
+
+/* Vector_34 */
+
+position: absolute;
+left: 85.98%;
+right: 9.4%;
+top: 96.1%;
+bottom: 0%;
+
+background: #2E2E2E;
+
+
+/* Vector_35 */
+
+position: absolute;
+left: 75.84%;
+right: 15.93%;
+top: 26.94%;
+bottom: 44.3%;
+
+background: #2E2E2E;
+
+
+/* Vector_36 */
+
+position: absolute;
+left: 80.93%;
+right: 17.15%;
+top: 22.71%;
+bottom: 69.62%;
+
+background: #266DC6;
+
+
+/* Vector_37 */
+
+position: absolute;
+left: 80.93%;
+right: 17.15%;
+top: 22.71%;
+bottom: 69.62%;
+
+background: #266DC6;
+
+
+/* Vector_38 */
+
+position: absolute;
+left: 71.63%;
+right: 18.6%;
+top: 12.03%;
+bottom: 53.12%;
+
+background: #266DC6;
+
+
+/* Vector_39 */
+
+position: absolute;
+left: 73.21%;
+right: 7.73%;
+top: 100%;
+bottom: 0%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_40 */
+
+position: absolute;
+left: 81.63%;
+right: 17.93%;
+top: 14.94%;
+bottom: 81.39%;
+
+background: #266DC6;
+
+
+/* Vector_41 */
+
+position: absolute;
+left: 81.63%;
+right: 17.93%;
+top: 14.94%;
+bottom: 81.39%;
+
+background: #266DC6;
+
+
+/* Vector_42 */
+
+position: absolute;
+left: 74.96%;
+right: 9.4%;
+top: 36.87%;
+bottom: 0%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_43 */
+
+position: absolute;
+left: 65.76%;
+right: 21.19%;
+top: 59.88%;
+bottom: 14.61%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_44 */
+
+position: absolute;
+left: 71.66%;
+right: 18.29%;
+top: 11.59%;
+bottom: 53.19%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_45 */
+
+position: absolute;
+left: 81.15%;
+right: 16.95%;
+top: 22.39%;
+bottom: 68.99%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_46 */
+
+position: absolute;
+left: 80.6%;
+right: 17.94%;
+top: 15.42%;
+bottom: 77.6%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_47 */
+
+position: absolute;
+left: 81.71%;
+right: 17.82%;
+top: 14.39%;
+bottom: 81.29%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_48 */
+
+position: absolute;
+left: 89.73%;
+right: 10.26%;
+top: 6.6%;
+bottom: 93.39%;
+
+background: #266DC6;
+
+
+/* Vector_49 */
+
+position: absolute;
+left: 81.4%;
+right: 18.33%;
+top: 20.51%;
+bottom: 78.91%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_50 */
+
+position: absolute;
+left: 81.37%;
+right: 18.2%;
+top: 17.28%;
+bottom: 82.09%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_51 */
+
+position: absolute;
+left: 73.52%;
+right: 19.13%;
+top: 26.8%;
+bottom: 46.71%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_52 */
+
+position: absolute;
+left: 76.55%;
+right: 19.27%;
+top: 32.75%;
+bottom: 51.44%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_53 */
+
+position: absolute;
+left: 71.16%;
+right: 21.4%;
+top: 53.11%;
+bottom: 23.38%;
+
+background: #FFFFFF;
+
+
+/* Vector_54 */
+
+position: absolute;
+left: 74.87%;
+right: 22.87%;
+top: 46.6%;
+bottom: 44.91%;
+
+background: #D7E8F0;
+
+
+/* Vector_55 */
+
+position: absolute;
+left: 74.84%;
+right: 22.87%;
+top: 46.6%;
+bottom: 44.4%;
+
+background: #D7E8F0;
+
+
+/* Vector_56 */
+
+position: absolute;
+left: 74.84%;
+right: 22.41%;
+top: 46.6%;
+bottom: 44.4%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_57 */
+
+position: absolute;
+left: 71.16%;
+right: 22.74%;
+top: 54.01%;
+bottom: 24.35%;
+
+background: #266DC6;
+
+
+/* Vector_58 */
+
+position: absolute;
+left: 71.16%;
+right: 22.41%;
+top: 53.06%;
+bottom: 24.16%;
+
+background: #FFFFFF;
+
+
+/* Vector_59 */
+
+position: absolute;
+left: 71.38%;
+right: 22.63%;
+top: 53.84%;
+bottom: 24.88%;
+
+background: #266DC6;
+
+
+/* Vector_60 */
+
+position: absolute;
+left: 71.16%;
+right: 22.42%;
+top: 53.12%;
+bottom: 24.16%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_61 */
+
+position: absolute;
+left: 76.17%;
+right: 21.4%;
+top: 56.98%;
+bottom: 23.38%;
+
+background: #FFFFFF;
+
+
+/* Vector_62 */
+
+position: absolute;
+left: 76.17%;
+right: 21.4%;
+top: 56.98%;
+bottom: 23.38%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_63 */
+
+position: absolute;
+left: 76.17%;
+right: 22.83%;
+top: 73.99%;
+bottom: 23.38%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_64 */
+
+position: absolute;
+left: 76.85%;
+right: 21.9%;
+top: 57.36%;
+bottom: 26.01%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_65 */
+
+position: absolute;
+left: 80.93%;
+right: 10.91%;
+top: 26.75%;
+bottom: 60.14%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_66 */
+
+position: absolute;
+left: 81.89%;
+right: 8.74%;
+top: 26.61%;
+bottom: 50.68%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_67 */
+
+position: absolute;
+left: 86.93%;
+right: 7.66%;
+top: 23.96%;
+bottom: 73.12%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_68 */
+
+position: absolute;
+left: 91.99%;
+right: 5.25%;
+top: 8.65%;
+bottom: 75.76%;
+
+border: 1.73036px solid #000000;
+
+
+/* Vector_69 */
+
+position: absolute;
+left: 88.12%;
+right: 9.65%;
+top: 0%;
+bottom: 92.9%;
+
+background: #266DC6;
+
+
+/* Vector_70 */
+
+position: absolute;
+left: 88.67%;
+right: 10.34%;
+top: 1.7%;
+bottom: 95.12%;
+
+background: #FFFFFF;
+
+
+/* Group */
+
+position: absolute;
+left: 87.69%;
+right: 11.09%;
+top: 10.59%;
+bottom: 85.5%;
+
+opacity: 0.72;
+
+
+/* Vector_71 */
+
+position: absolute;
+left: 87.69%;
+right: 11.09%;
+top: 10.59%;
+bottom: 85.5%;
+
+background: #266DC6;
+opacity: 0.72;
+
+
+/* Vector_72 */
+
+position: absolute;
+left: 87.98%;
+right: 11.48%;
+top: 11.85%;
+bottom: 86.43%;
+
+background: #FFFFFF;
+opacity: 0.72;
+
+
+/* Vector_73 */
+
+position: absolute;
+left: 90.91%;
+right: 7.28%;
+top: 8.12%;
+bottom: 86.09%;
+
+background: #266DC6;
+
+
+/* Vector_74 */
+
+position: absolute;
+left: 91.6%;
+right: 7.37%;
+top: 8.46%;
+bottom: 86.8%;
+
+background: #FFFFFF;
+
+
+/* Vector_75 */
+
+position: absolute;
+left: 91.14%;
+right: 8.53%;
+top: 10.13%;
+bottom: 88.82%;
+
+background: #FFFFFF;
+
+
+/* Vector_76 */
+
+position: absolute;
+left: 88.87%;
+right: 9.45%;
+top: 14.01%;
+bottom: 79.85%;
+
+background: #266DC6;
+
+
+/* Vector_77 */
+
+position: absolute;
+left: 89.75%;
+right: 9.94%;
+top: 15.19%;
+bottom: 83.82%;
+
+background: #FFFFFF;
+
+
+/* Vector_78 */
+
+position: absolute;
+left: 89.55%;
+right: 10.14%;
+top: 16.56%;
+bottom: 82.45%;
+
+background: #FFFFFF;
+
+
+/* Vector_79 */
+
+position: absolute;
+left: 89.36%;
+right: 10.33%;
+top: 17.84%;
+bottom: 81.17%;
+
+background: #FFFFFF;
+
+
+/* Group_2 */
+
+position: absolute;
+left: 84.69%;
+right: 12.96%;
+top: 12.99%;
+bottom: 78.03%;
+
+opacity: 0.54;
+
+
+/* Vector_80 */
+
+position: absolute;
+left: 84.69%;
+right: 12.96%;
+top: 12.99%;
+bottom: 78.03%;
+
+background: #266DC6;
+opacity: 0.54;
+
+
+/* Vector_81 */
+
+position: absolute;
+left: 85.34%;
+right: 13.71%;
+top: 15.86%;
+bottom: 81.09%;
+
+background: #FFFFFF;
+opacity: 0.54;
+
+
+/* trending video container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px;
+gap: 48px;
+
+width: 1200px;
+height: 1049px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 🤓 Vetted and trending */
+
+display: none;
+width: 259px;
+height: 29px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ai summary */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px;
+gap: 24px;
+
+width: 1104px;
+height: 161px;
+
+background: url(003-desktop.jpg);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ✨ Trend Report */
+
+width: 181px;
+height: 29px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Our AI-generated summaries provide a snapshot of what people are saying about the latest beauty products. With each search, you’ll get a quick overview of all the product videos approved by industry veterans. */
+
+width: 1040px;
+height: 44px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* video tile */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 1104px;
+height: 216px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* video */
+
+width: 430px;
+height: 216px;
+
+background: #F9FCFD;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Screenshot 2024-09-04 at 3.06.40 PM 1 */
+
+position: absolute;
+width: 430px;
+height: 225.89px;
+left: 0px;
+top: -0.07px;
+
+background: url(Screenshot 2024-09-04 at 3.06.40 PM);
+
+
+/* duration */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 4px;
+gap: 10px;
+
+position: absolute;
+width: 58px;
+height: 26px;
+left: 359px;
+top: 175px;
+
+background: #000000;
+border-radius: 4px;
+
+
+/* 00:00 */
+
+width: 50px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #F9FCFD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 12 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 650px;
+height: 198px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* video details */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 430px;
+height: 54px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Product video name */
+
+width: 430px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* video details line 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 430px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* username */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 147px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* lucide/circle-user-round */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* username123 */
+
+width: 115px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* eye */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+/* Primary/Blue */
+border: 2px solid #04121F;
+
+
+/* 288.2k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* lucide/heart */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #000000;
+
+
+/* lucide/thumbs-up */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 9.04%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* 160k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* (AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod */
+
+width: 650px;
+height: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* tags */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 574px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 94px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* K-Beauty */
+
+width: 78px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 122px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Gel cleanser */
+
+width: 106px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 234px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Good for acne-prone skin */
+
+width: 218px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 100px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Hydrating */
+
+width: 84px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* video tile */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 1104px;
+height: 216px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* video */
+
+width: 430px;
+height: 216px;
+
+background: url(Screenshot 2024-09-04 at 3.06.52 PM), #F9FCFD;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* duration */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 4px;
+gap: 10px;
+
+position: absolute;
+width: 58px;
+height: 26px;
+left: 359px;
+top: 175px;
+
+background: #000000;
+border-radius: 4px;
+
+
+/* 00:00 */
+
+width: 50px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #F9FCFD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 12 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 650px;
+height: 198px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* video details */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 430px;
+height: 54px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Product video name */
+
+width: 430px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* video details line 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 430px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* username */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 147px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* lucide/circle-user-round */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* username123 */
+
+width: 115px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* eye */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+/* Primary/Blue */
+border: 2px solid #04121F;
+
+
+/* 288.2k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* lucide/heart */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #000000;
+
+
+/* lucide/thumbs-up */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 9.04%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* 160k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* (AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod */
+
+width: 650px;
+height: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* tags */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 574px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 94px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* K-Beauty */
+
+width: 78px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 122px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Gel cleanser */
+
+width: 106px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 234px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Good for acne-prone skin */
+
+width: 218px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 100px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Hydrating */
+
+width: 84px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* video tile */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 1104px;
+height: 216px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* video */
+
+width: 430px;
+height: 216px;
+
+background: #F9FCFD;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* image 11 */
+
+position: absolute;
+width: 430px;
+height: 225px;
+left: 0px;
+top: -0.07px;
+
+background: url(image);
+
+
+/* duration */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 4px;
+gap: 10px;
+
+position: absolute;
+width: 58px;
+height: 26px;
+left: 359px;
+top: 175px;
+
+background: #000000;
+border-radius: 4px;
+
+
+/* 00:00 */
+
+width: 50px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #F9FCFD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* duration */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 4px;
+gap: 10px;
+
+position: absolute;
+visibility: hidden;
+width: 100px;
+height: 26px;
+left: 13px;
+top: 10.93px;
+
+background: #000000;
+border-radius: 4px;
+
+
+/* Sponsored */
+
+width: 92px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #F9FCFD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 12 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 650px;
+height: 198px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* video details */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 430px;
+height: 54px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Product video name */
+
+width: 430px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* video details line 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 430px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* username */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 147px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* lucide/circle-user-round */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* username123 */
+
+width: 115px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* eye */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 20.83%;
+bottom: 20.83%;
+
+/* Primary/Blue */
+border: 2px solid #04121F;
+
+
+/* 288.2k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* likes */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 91px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* lucide/heart */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #000000;
+
+
+/* lucide/thumbs-up */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 9.04%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #000000;
+
+
+/* 160k */
+
+width: 59px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* (AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod */
+
+width: 650px;
+height: 66px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* tags */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 574px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 94px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* K-Beauty */
+
+width: 78px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 122px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Gel cleanser */
+
+width: 106px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 234px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Good for acne-prone skin */
+
+width: 218px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* tag */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 8px;
+gap: 10px;
+
+width: 100px;
+height: 30px;
+
+border: 1px solid #AFC7E6;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Hydrating */
+
+width: 84px;
+height: 22px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
