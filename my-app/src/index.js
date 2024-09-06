@@ -112,7 +112,7 @@ const Home = () => {
           Placeholder 
         </button>
       </div>
-    </div>
+    </div>  
   );
 };
 
