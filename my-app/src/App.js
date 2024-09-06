@@ -1,11 +1,14 @@
 import React from 'react';
-import BeautyProductWebsite from './index'; // Assuming BeautyProductWebsite is in index.js
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './index.js';
 
 const App = () => {
   return (
-    <div>
-      <BeautyProductWebsite />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 };
 
