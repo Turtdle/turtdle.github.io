@@ -29,28 +29,20 @@ const Home = () => {
         options={{
           background: {
             color: {
-              value: "#0d47a1", // Blue background color
+              value: "#000000", // Fallback color
             },
           },
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
               onHover: {
                 enable: true,
                 mode: "repulse",
               },
-              resize: true,
             },
             modes: {
-              push: {
-                quantity: 4,
-              },
               repulse: {
-                distance: 200,
+                distance: 150,
                 duration: 0.4,
               },
             },
@@ -63,7 +55,7 @@ const Home = () => {
               color: "#ffffff",
               distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 0.2,
               width: 1,
             },
             move: {
@@ -73,7 +65,7 @@ const Home = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 6,
+              speed: 1,
               straight: false,
             },
             number: {
@@ -87,7 +79,7 @@ const Home = () => {
               value: 0.5,
             },
             shape: {
-              type: "circle",
+              type: "star",
             },
             size: {
               value: { min: 1, max: 5 },
@@ -103,7 +95,7 @@ const Home = () => {
           Welcome
         </h1>
         <p className="text-xl text-gray-700 mb-8">
-          Here is the directory
+          Here is the directory.
         </p>
         <button
           onClick={handleExploreClick}
