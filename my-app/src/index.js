@@ -95,7 +95,7 @@ const Home = () => {
           Welcome
         </h1>
         <p className="text-xl text-gray-700 mb-8">
-          Here is the directory.
+          Here is the directory .
         </p>
         <button
           onClick={handleExploreClick}
