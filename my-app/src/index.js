@@ -90,7 +90,7 @@ const Home = () => {
         className="absolute inset-0 z-0"
       />
 
-      <div className="text-center z-10 relative">
+      <div className="text-center z-0 relative">
         <h1 className="text-5xl font-bold text-gray-800 mb-6">
           Welcome
         </h1>
