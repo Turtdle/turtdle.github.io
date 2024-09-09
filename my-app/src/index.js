@@ -29,42 +29,20 @@ const Home = () => {
         options={{
           background: {
             color: {
-<<<<<<< HEAD
-              value: "#0d47a1", // Blue background color
-=======
               value: "#000000", // Fallback color
->>>>>>> temp
             },
           },
           fpsLimit: 120,
           interactivity: {
             events: {
-<<<<<<< HEAD
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-=======
->>>>>>> temp
               onHover: {
                 enable: true,
                 mode: "repulse",
               },
-<<<<<<< HEAD
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-=======
             },
             modes: {
               repulse: {
                 distance: 150,
->>>>>>> temp
                 duration: 0.4,
               },
             },
@@ -77,11 +55,7 @@ const Home = () => {
               color: "#ffffff",
               distance: 150,
               enable: true,
-<<<<<<< HEAD
-              opacity: 0.5,
-=======
               opacity: 0.2,
->>>>>>> temp
               width: 1,
             },
             move: {
@@ -91,11 +65,7 @@ const Home = () => {
                 default: "bounce",
               },
               random: false,
-<<<<<<< HEAD
-              speed: 6,
-=======
               speed: 1,
->>>>>>> temp
               straight: false,
             },
             number: {
@@ -109,11 +79,7 @@ const Home = () => {
               value: 0.5,
             },
             shape: {
-<<<<<<< HEAD
-              type: "circle",
-=======
               type: "star",
->>>>>>> temp
             },
             size: {
               value: { min: 1, max: 5 },
@@ -129,11 +95,7 @@ const Home = () => {
           Welcome
         </h1>
         <p className="text-xl text-gray-700 mb-8">
-<<<<<<< HEAD
-          Here is the directory
-=======
           Here is the directory.
->>>>>>> temp
         </p>
         <button
           onClick={handleExploreClick}
@@ -142,11 +104,7 @@ const Home = () => {
           Placeholder 
         </button>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
     </div>  
->>>>>>> temp
   );
 };
 
