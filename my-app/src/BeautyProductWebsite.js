@@ -1,6 +1,7 @@
 
 import { Search } from 'lucide-react';
 import React from 'react';
+import './index.css';
 const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">{children}</div>;
 const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;

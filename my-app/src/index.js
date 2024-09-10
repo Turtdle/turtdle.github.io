@@ -1,12 +1,16 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; 
 import ReactDOM from 'react-dom';
 import App from './App';
+import './BeautyProductWebsite';
+import './index.css';
 
 const Home = () => {
   const navigate = useNavigate();
+  const [pageCode, setPageCode] = useState('');
+
   const particlesInit = useCallback(async engine => {
     console.log(engine);
     await loadSlim(engine);
@@ -16,41 +20,105 @@ const Home = () => {
     await console.log(container);
   }, []);
 
-  const handleExploreClick = () => {
-    navigate('/beauty-products');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (pageCode === 'proto') {
+      navigate('/beauty-products');
+    }
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative">
+    <div className="min-h-screen flex flex-col items-center justify-center relative z+100 relative">
       <Particles
-  options={{
-    particles: {
-      number: {
-        value: 80,
-      },
-      opacity: {
-        value: 0.5,
-      },
-      shape: {
-        type: "star",
-      },
-      size: {
-        value: { min: 1, max: 5 },
-      },
-    },
-    detectRetina: true,
-  }}
-  className="absolute inset-0 z-0"
-/>
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: {
+            color: {
+              value: "#4287f5", // Fallback color
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+            },
+            modes: {
+              repulse: {
+                distance: 150,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.2,
+              width: 1,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 1,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "star",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
 
-<div className="text-center z-10 relative">
-  <h1 className="text-5xl font-bold text-gray-800 mb-6">
-    Welcome
-  </h1>
-  <p className="text-xl text-gray-700 mb-8">
-    Here is the directory.
-  </p>
-</div>
+      <div className="text-center z-10 relative">
+        <h1 className="text-5xl font-bold text-gray-800 mb-6">
+          Welcome
+        </h1>
+        <p className="text-xl text-gray-700 mb-8">
+          Here is the directory.
+        </p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={pageCode}
+            onChange={(e) => setPageCode(e.target.value)}
+            placeholder="Enter page code"
+            className="bg-white text-gray-800 font-bold py-3 px-6 rounded-full text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          />
+          <button
+            type="submit"
+            className="bg-gray-800 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-gray-700 transition duration-300 ml-4"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>  
   );
 };
