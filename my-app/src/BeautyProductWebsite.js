@@ -6,13 +6,18 @@ const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">
 const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;
 
-const ProductVideo = ({ username, views, length, summary }) => (
+const ProductVideo = ({ username, views, length, summary, thumbnail }) => (
+  
   <div className="mt-4">
     <div className="relative">
-      <img src="/api/placeholder/400/225" alt="Placeholder" className="w-full rounded-lg" />
+      <div className="w-1/4">
+      <img src={thumbnail} alt="Placeholder" className="w-full rounded-lg" />
+      </div>
+      <div className="w-3/4 pl-4">
       <div className="absolute bottom-2 right-2 bg-gray-900 text-white rounded-md px-2 py-1 text-xs">
         {length}
       </div>
+    </div>
     </div>
     <div className="mt-2">
       <p className="text-sm">
@@ -38,6 +43,7 @@ const ProductVideo = ({ username, views, length, summary }) => (
 );
 
 const BeautyProductWebsite = () => (
+  
   <div className="bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
@@ -101,6 +107,7 @@ const BeautyProductWebsite = () => (
               views="288.2k"
               length="1:60"
               summary="(AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+              thumbnail="https://i.ytimg.com/vi/ohWeFBTHUr0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_lDO-3rW04mF3C5eoesDEhA-C4w"
             />
 
             <ProductVideo 
@@ -108,14 +115,18 @@ const BeautyProductWebsite = () => (
               views="288.2k"
               length="1:60"
               summary="(AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-            />
+              thumbnail="https://i.ytimg.com/vi/ohWeFBTHUr0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_lDO-3rW04mF3C5eoesDEhA-C4w"
+              />
+  
 
             <ProductVideo
               username="username123" 
               views="288.2k"
               length="1:60"
               summary="(AI SUMMARY OF SPECIFIC VIDEO) Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-            />
+              thumbnail="https://i.ytimg.com/vi/ohWeFBTHUr0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_lDO-3rW04mF3C5eoesDEhA-C4w"
+              />
+  
           </CardContent>
         </Card>
       </div>

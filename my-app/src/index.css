@@ -109,3 +109,13 @@ body {
 .text-xl {
   font-size: 20px;
 }
+
+.text-title {
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+  text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; /* White outline */
+}

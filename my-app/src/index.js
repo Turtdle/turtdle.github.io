@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; 
@@ -8,6 +8,15 @@ import './BeautyProductWebsite';
 import './index.css';
 
 const Home = () => {
+  const onWebsiteLoad = () => {
+    console.log('Website loaded');
+    // Add any other logic you want to run on load
+  };
+
+  // Use useEffect to run the function when the component mounts
+  useEffect(() => {
+    onWebsiteLoad();
+  }, []);
   const navigate = useNavigate();
   const [pageCode, setPageCode] = useState('');
 
@@ -36,7 +45,7 @@ const Home = () => {
         options={{
           background: {
             color: {
-              value: "#4287f5", // Fallback color
+              value: "#131862", // Fallback color
             },
           },
           fpsLimit: 120,
