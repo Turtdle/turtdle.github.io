@@ -5,7 +5,7 @@ import BeautyProductWebsite from './BeautyProductWebsite';
 import './App.css';
 
 const App = () => {
-  
+
   return (
     <Router>
       <Routes>

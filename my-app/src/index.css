@@ -110,7 +110,7 @@ body {
   font-size: 20px;
 }
 
-.text-center {
+.text-5xl {
   font-size: 3rem; /* Adjust the font size as needed */
   color: #fff; /* Text color */
   text-shadow: 
@@ -119,3 +119,4 @@ body {
     -1px 1px 0 #fff,
     1px 1px 0 #fff; /* White outline */
 }
+

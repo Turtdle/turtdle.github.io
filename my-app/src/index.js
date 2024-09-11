@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './BeautyProductWebsite';
 import './index.css';
-
+import {onWebsiteLoadBeautyProductWebsite} from './BeautyProductWebsite';
 const Home = () => {
   const onWebsiteLoad = () => {
     console.log('Website loaded');
@@ -16,6 +16,7 @@ const Home = () => {
   // Use useEffect to run the function when the component mounts
   useEffect(() => {
     onWebsiteLoad();
+    //onWebsiteLoadBeautyProductWebsite();
   }, []);
   const navigate = useNavigate();
   const [pageCode, setPageCode] = useState('');

@@ -1,10 +1,16 @@
 
 import { Search } from 'lucide-react';
-import React from 'react';
+import React, {useEffect,  useState} from 'react';
 import './index.css';
 const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">{children}</div>;
 const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;
+const onWebsiteLoadBeautyProductWebsite = async () => {
+  console.log('Beauty Product Website loaded');
+  // Add any other logic you want to run on load
+};
+
+// Use useEffect to run the function when the component mounts
 
 const ProductVideo = ({ username, views, length, summary, thumbnail }) => (
   
@@ -42,7 +48,25 @@ const ProductVideo = ({ username, views, length, summary, thumbnail }) => (
   </div>  
 );
 
-const BeautyProductWebsite = () => (
+const BeautyProductWebsite = () => {
+  const [fileContent, setFileContent] = useState('');
+
+  useEffect(() => {
+    const fetchFileContent = async () => {
+      try {
+        const response = await fetch('/path/to/your/file.txt');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const content = await response.text();
+        setFileContent(content);
+        console.log('File content loaded:', content);
+      } catch (error) {
+        console.error('Error fetching file:', error);
+      }
+    };    fetchFileContent();
+  }, []);
+  return (
   
   <div className="bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,5 +157,6 @@ const BeautyProductWebsite = () => (
     </div>
   </div>
 );
+}
 export default BeautyProductWebsite;
-
+export { onWebsiteLoadBeautyProductWebsite }
