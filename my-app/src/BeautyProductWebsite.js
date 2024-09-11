@@ -54,7 +54,7 @@ const BeautyProductWebsite = () => {
   useEffect(() => {
     const fetchFileContent = async () => {
       try {
-        const response = await fetch('/path/to/your/file.txt');
+        const response = await fetch('/content.txt');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
