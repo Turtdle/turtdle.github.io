@@ -34,6 +34,8 @@ const Home = () => {
     e.preventDefault();
     if (pageCode === 'proto') {
       navigate('/beauty-products');
+    } else if (pageCode.toLowerCase() === 'nhung') {
+      window.location.href = 'https://www.linkedin.com/in/nathan-hung-3a7a00229/';
     }
   };
 
