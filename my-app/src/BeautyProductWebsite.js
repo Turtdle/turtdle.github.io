@@ -78,10 +78,16 @@ const BeautyProductWebsite = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <span className="text-2xl font-bold text-gray-900">LOGO</span>
+            <span className="text-2xl font-bold text-gray-900">Landing International</span>
           </div>
           <div className="flex items-center justify-end md:flex-1 lg:w-0">
-            <div className="relative mt-1 rounded-md">
+            <a
+              href="/"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+            >
+              Home
+            </a>
+            <div className="relative mt-1 rounded-md ml-4">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search className="h-5 w-5 text-gray-400" />
               </div>
