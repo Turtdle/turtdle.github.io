@@ -1,1 +1,388 @@
-cool
+PS C:\Users\sam\Documents\Landing-International-Sam\Interpreter-Project> & C:/Users/sam/AppData/Local/Programs/Python/Python311/python.exe c:/Users/sam/Documents/Landing-International-Sam/Interpreter-Project/main.py
+0: Advanced Snail 96 Mucin Power Essence 
+10: Bean Essence
+19: Mineral Peel Face
+23: Glycolic Acid Toning Solution
+32: Health Hair Shampoo
+Enter number of Product Name: 10
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2Tfe5Dds_x4 
+[youtube] 2Tfe5Dds_x4: Downloading webpage
+[youtube] 2Tfe5Dds_x4: Downloading ios player API JSON 
+[youtube] 2Tfe5Dds_x4: Downloading web creator player API JSON 
+[youtube] 2Tfe5Dds_x4: Downloading player e38bb6de 
+[youtube] 2Tfe5Dds_x4: Downloading m3u8 information 
+[info] 2Tfe5Dds_x4: Downloading 1 format(s): 251 
+[download] Destination: audio\How To Use Mixsoon Bean Essence.mp3 
+[download] 100% of    2.77MiB in 00:00:00 at 9.18MiB/s
+How To Use Mixsoon Bean Essence
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2Tfe5Dds_x4
+[youtube] 2Tfe5Dds_x4: Downloading webpage
+[youtube] 2Tfe5Dds_x4: Downloading ios player API JSON 
+[youtube] 2Tfe5Dds_x4: Downloading web creator player API JSON 
+[youtube] 2Tfe5Dds_x4: Downloading m3u8 information 
+[info] 2Tfe5Dds_x4: Downloading 1 format(s): 251 
+[download] audio\How To Use Mixsoon Bean Essence.mp3 has already been downloaded 
+[download] 100% of    2.77MiB
+Downloaded audio from https://www.youtube.com/watch?v=2Tfe5Dds_x4
+[youtube] Extracting URL: https://www.youtube.com/watch?v=7qlmJxBkofc 
+[youtube] 7qlmJxBkofc: Downloading webpage
+[youtube] 7qlmJxBkofc: Downloading ios player API JSON 
+[youtube] 7qlmJxBkofc: Downloading web creator player API JSON 
+[youtube] 7qlmJxBkofc: Downloading player e38bb6de 
+[youtube] 7qlmJxBkofc: Downloading m3u8 information 
+[info] 7qlmJxBkofc: Downloading 1 format(s): 251 
+[download] Destination: audio\mixsoon l How to use bean essence.mp3 
+[download] 100% of  510.02KiB in 00:00:00 at 1.45MiB/s
+mixsoon l How to use bean essence
+[youtube] Extracting URL: https://www.youtube.com/watch?v=7qlmJxBkofc
+[youtube] 7qlmJxBkofc: Downloading webpage
+[youtube] 7qlmJxBkofc: Downloading ios player API JSON 
+[youtube] 7qlmJxBkofc: Downloading web creator player API JSON 
+[youtube] 7qlmJxBkofc: Downloading m3u8 information 
+[info] 7qlmJxBkofc: Downloading 1 format(s): 251 
+[download] audio\mixsoon l How to use bean essence.mp3 has already been downloaded 
+[download] 100% of  510.02KiB
+Downloaded audio from https://www.youtube.com/watch?v=7qlmJxBkofc
+[youtube] Extracting URL: https://www.youtube.com/shorts/eQRwX-9dSIo 
+[youtube] eQRwX-9dSIo: Downloading webpage
+[youtube] eQRwX-9dSIo: Downloading ios player API JSON 
+[youtube] eQRwX-9dSIo: Downloading web creator player API JSON 
+[youtube] eQRwX-9dSIo: Downloading m3u8 information 
+[info] eQRwX-9dSIo: Downloading 1 format(s): 251 
+[download] Destination: audio\USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️｜ #viralskincare #skincare #kbeauty #koreanskincare.mp3 
+[download] 100% of  504.35KiB in 00:00:00 at 4.39MiB/s
+USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️| #viralskincare #skincare #kbeauty #koreanskincare
+[youtube] Extracting URL: https://www.youtube.com/shorts/eQRwX-9dSIo
+[youtube] eQRwX-9dSIo: Downloading webpage
+[youtube] eQRwX-9dSIo: Downloading ios player API JSON 
+[youtube] eQRwX-9dSIo: Downloading web creator player API JSON 
+[youtube] eQRwX-9dSIo: Downloading m3u8 information 
+[info] eQRwX-9dSIo: Downloading 1 format(s): 251 
+[download] audio\USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️｜ #viralskincare #skincare #kbeauty #koreanskincare.mp3 has already beeen downloaded
+[download] 100% of  504.35KiB
+Downloaded audio from https://www.youtube.com/shorts/eQRwX-9dSIo
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mGwy3lUrUWI 
+[youtube] mGwy3lUrUWI: Downloading webpage
+[youtube] mGwy3lUrUWI: Downloading ios player API JSON 
+[youtube] mGwy3lUrUWI: Downloading web creator player API JSON 
+[youtube] mGwy3lUrUWI: Downloading m3u8 information 
+[info] mGwy3lUrUWI: Downloading 1 format(s): 251 
+[download] Destination: audio\Does the Viral Mixsoon Bean Essence Actually Work？.mp3 
+[download] 100% of    1.21MiB in 00:00:00 at 2.81MiB/s
+Does the Viral Mixsoon Bean Essence Actually Work?
+[youtube] Extracting URL: https://www.youtube.com/watch?v=mGwy3lUrUWI
+[youtube] mGwy3lUrUWI: Downloading webpage
+[youtube] mGwy3lUrUWI: Downloading ios player API JSON 
+[youtube] mGwy3lUrUWI: Downloading web creator player API JSON 
+[youtube] mGwy3lUrUWI: Downloading m3u8 information 
+[info] mGwy3lUrUWI: Downloading 1 format(s): 251 
+[download] audio\Does the Viral Mixsoon Bean Essence Actually Work？.mp3 has already been downloaded 
+[download] 100% of    1.21MiB
+Downloaded audio from https://www.youtube.com/watch?v=mGwy3lUrUWI
+[youtube] Extracting URL: https://www.youtube.com/shorts/oMKT-6DTEVI 
+[youtube] oMKT-6DTEVI: Downloading webpage
+[youtube] oMKT-6DTEVI: Downloading ios player API JSON 
+[youtube] oMKT-6DTEVI: Downloading web creator player API JSON 
+[youtube] oMKT-6DTEVI: Downloading m3u8 information 
+[info] oMKT-6DTEVI: Downloading 1 format(s): 251 
+[download] Destination: audio\Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon.mp3 
+[download] 100% of  235.88KiB in 00:00:00 at 864.34KiB/s
+Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon
+[youtube] Extracting URL: https://www.youtube.com/shorts/oMKT-6DTEVI
+[youtube] oMKT-6DTEVI: Downloading webpage
+[youtube] oMKT-6DTEVI: Downloading ios player API JSON 
+[youtube] oMKT-6DTEVI: Downloading web creator player API JSON 
+[youtube] oMKT-6DTEVI: Downloading m3u8 information 
+[info] oMKT-6DTEVI: Downloading 1 format(s): 251 
+[download] audio\Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon.mp3 has already been downloaded 
+[download] 100% of  235.88KiB
+Downloaded audio from https://www.youtube.com/shorts/oMKT-6DTEVI
+[youtube] Extracting URL: https://www.youtube.com/watch?v=wW5kojkrZtQ 
+[youtube] wW5kojkrZtQ: Downloading webpage
+[youtube] wW5kojkrZtQ: Downloading ios player API JSON 
+[youtube] wW5kojkrZtQ: Downloading web creator player API JSON 
+[youtube] wW5kojkrZtQ: Downloading m3u8 information 
+[info] wW5kojkrZtQ: Downloading 1 format(s): 251 
+[download] Destination: audio\Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it？🤔.mp3 
+[download] 100% of  798.56KiB in 00:00:00 at 1.01MiB/s
+Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it?🤔
+[youtube] Extracting URL: https://www.youtube.com/watch?v=wW5kojkrZtQ
+[youtube] wW5kojkrZtQ: Downloading webpage
+[youtube] wW5kojkrZtQ: Downloading ios player API JSON 
+[youtube] wW5kojkrZtQ: Downloading web creator player API JSON 
+[youtube] wW5kojkrZtQ: Downloading m3u8 information 
+[info] wW5kojkrZtQ: Downloading 1 format(s): 251 
+[download] audio\Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it？🤔.mp3 has already been downloaded
+[download] 100% of  798.56KiB
+Downloaded audio from https://www.youtube.com/watch?v=wW5kojkrZtQ
+[youtube] Extracting URL: https://www.youtube.com/shorts/Iht61qMQa5Y 
+[youtube] Iht61qMQa5Y: Downloading webpage
+[youtube] Iht61qMQa5Y: Downloading ios player API JSON 
+[youtube] Iht61qMQa5Y: Downloading web creator player API JSON 
+[youtube] Iht61qMQa5Y: Downloading m3u8 information 
+[info] Iht61qMQa5Y: Downloading 1 format(s): 251 
+[download] Destination: audio\Meet the Viral Mixsoon Bean Essence✨.mp3 
+[download] 100% of  460.79KiB in 00:00:00 at 1.81MiB/s
+Meet the Viral Mixsoon Bean Essence✨
+[youtube] Extracting URL: https://www.youtube.com/shorts/Iht61qMQa5Y
+[youtube] Iht61qMQa5Y: Downloading webpage
+[youtube] Iht61qMQa5Y: Downloading ios player API JSON 
+[youtube] Iht61qMQa5Y: Downloading web creator player API JSON 
+[youtube] Iht61qMQa5Y: Downloading m3u8 information 
+[info] Iht61qMQa5Y: Downloading 1 format(s): 251 
+[download] audio\Meet the Viral Mixsoon Bean Essence✨.mp3 has already been downloaded 
+[download] 100% of  460.79KiB
+Downloaded audio from https://www.youtube.com/shorts/Iht61qMQa5Y
+Uploading Does the Viral Mixsoon Bean Essence Actually Work？.mp3 to Otter.ai
+Uploading How To Use Mixsoon Bean Essence.mp3 to Otter.ai
+Uploading Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it？🤔.mp3 to Otter.ai
+Uploading Meet the Viral Mixsoon Bean Essence✨.mp3 to Otter.ai
+Uploading mixsoon l How to use bean essence.mp3 to Otter.ai
+Uploading Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon.mp3 to Otter.ai
+Uploading USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️｜ #viralskincare #skincare #kbeauty #koreanskincare.mp3 to Otter.ai
+[TextBlock(text='Here is a summary of the key points about the Mixon Bean Essence product based on the provided transcripts:\n\n- It is a popular Korean skincare product that serves as both an essence and gentle exfoliator. As an essence, it hydrates and nourishes the skin. As an exfoliator, it helps remove dead skin cells and impurities when massaged into the skin for a few minutes.\n\n- The main ingredient is 100% fermented bean extract, which is rich in antioxidants, proteins and nutrients to revitalize the skin. It also contains fermented barley, pomegranate and Korean pear extracts. \n\n- Benefits include enhanced skin nourishment, reduced oil production, antioxidant protection, improved skin texture and increased elasticity. It aims to leave skin moisturized, smooth and glowing.\n\n- To use, it can be gently massaged into skin 2-3 times per week as an exfoliator, then rinsed off. For daily use as an essence, a small amount is patted into skin after cleansing and toning.\n\n- The texture is similar to snail mucin essences but this is a vegan alternative without the snail secretion filtrate. A little product goes a long way.\n\n- Overall, the Mixon Bean Essence is praised as a satisfying and effective product for hydrating, gently exfoliating and revitalizing the skin with clean, minimal ingredients. It has gained viral popularity.', type='text')]
+Links:
+Are you sure you want to clear the audio and texts directories? (y/n): n
+Directories not cleared.
+0: Advanced Snail 96 Mucin Power Essence
+10: Bean Essence
+19: Mineral Peel Face
+23: Glycolic Acid Toning Solution
+32: Health Hair Shampoo
+Enter number of Product Name: 19
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2sTRELvQi84 
+[youtube] 2sTRELvQi84: Downloading webpage
+[youtube] 2sTRELvQi84: Downloading ios player API JSON 
+[youtube] 2sTRELvQi84: Downloading web creator player API JSON 
+[youtube] 2sTRELvQi84: Downloading m3u8 information 
+[info] 2sTRELvQi84: Downloading 1 format(s): 251 
+[download] Destination: audio\O.R.G SKINCARE MINERAL PEEL FACE REVIEW.mp3 
+[download] 100% of    4.98MiB in 00:00:02 at 2.14MiB/s
+O.R.G SKINCARE MINERAL PEEL FACE REVIEW
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2sTRELvQi84
+[youtube] 2sTRELvQi84: Downloading webpage 
+[youtube] 2sTRELvQi84: Downloading ios player API JSON 
+[youtube] 2sTRELvQi84: Downloading web creator player API JSON 
+[youtube] 2sTRELvQi84: Downloading m3u8 information 
+[info] 2sTRELvQi84: Downloading 1 format(s): 251 
+[download] audio\O.R.G SKINCARE MINERAL PEEL FACE REVIEW.mp3 has already been downloaded 
+[download] 100% of    4.98MiB
+Downloaded audio from https://www.youtube.com/watch?v=2sTRELvQi84
+[youtube] Extracting URL: https://www.youtube.com/watch?v=g4wS2jrqj-s 
+[youtube] g4wS2jrqj-s: Downloading webpage
+[youtube] g4wS2jrqj-s: Downloading ios player API JSON 
+[youtube] g4wS2jrqj-s: Downloading web creator player API JSON 
+[youtube] g4wS2jrqj-s: Downloading m3u8 information 
+[info] g4wS2jrqj-s: Downloading 1 format(s): 251 
+[download] Destination: audio\ORG Skincare Mineral Peel Face Review & Demo ｜ #FaceMaskFriday 37 ｜ CORRIE V.mp3 
+[download] 100% of    7.11MiB in 00:00:00 at 10.68MiB/s
+ORG Skincare Mineral Peel Face Review & Demo | #FaceMaskFriday 37 | CORRIE V
+[youtube] Extracting URL: https://www.youtube.com/watch?v=g4wS2jrqj-s
+[youtube] g4wS2jrqj-s: Downloading webpage
+[youtube] g4wS2jrqj-s: Downloading ios player API JSON 
+[youtube] g4wS2jrqj-s: Downloading web creator player API JSON 
+[youtube] g4wS2jrqj-s: Downloading m3u8 information 
+[info] g4wS2jrqj-s: Downloading 1 format(s): 251 
+[download] audio\ORG Skincare Mineral Peel Face Review & Demo ｜ #FaceMaskFriday 37 ｜ CORRIE V.mp3 has already been downloaded
+[download] 100% of    7.11MiB
+Downloaded audio from https://www.youtube.com/watch?v=g4wS2jrqj-s
+Duplicate found: Does the Viral Mixsoon Bean Essence Actually Work？.mp3
+Duplicate found: How To Use Mixsoon Bean Essence.mp3
+Duplicate found: Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it？🤔.mp3
+Duplicate found: Meet the Viral Mixsoon Bean Essence✨.mp3
+Duplicate found: mixsoon l How to use bean essence.mp3
+Uploading O.R.G SKINCARE MINERAL PEEL FACE REVIEW.mp3 to Otter.ai
+Uploading ORG Skincare Mineral Peel Face Review & Demo ｜ #FaceMaskFriday 37 ｜ CORRIE V.mp3 to Otter.ai
+Duplicate found: Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon.mp3
+Duplicate found: USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️｜ #viralskincare #skincare #kbeauty #koreanskincare.mp3
+[TextBlock(text="Based on the transcripts provided, the Mixon Bean Essence is a popular Korean skincare product that acts as both an essence and an exfoliator. Here are the key points about the product:\n\n1. Ingredients: The main ingredient is 100% fermented bean extract, which is rich in antioxidants, proteins, and nutrients. It also contains fermented barley, pomegranate, and Korean pear extracts.\n\n2. Benefits: The essence helps nourish the skin, reduce oil production, provide antioxidant protection, improve skin texture, and increase skin elasticity. It is a vegan alternative to snail mucin essences.\n\n3. Usage: It can be used in two ways - as a gentle exfoliator (by massaging it into the skin for a few minutes, 2-3 times a week) or as a daily essence (applied after cleansing and toning, followed by serums and moisturizer).\n\n4. Exfoliation: When massaged into the skin, the essence can remove dead skin cells and impurities, which may be visibly seen as particles coming out of the skin. This is not the product pilling, but the actual impurities being drawn out.\n\n5. Precautions: Users should perform a patch test before using the product on their face, use it in conjunction with other serums and moisturizers, and avoid using too much product at once.\n\nOverall, the Mixon Bean Essence is a versatile and effective skincare product that offers multiple benefits for those looking to improve their skin's health and appearance.", type='text')]
+Links:
+Are you sure you want to clear the audio and texts directories? (y/n): n
+Directories not cleared.
+0: Advanced Snail 96 Mucin Power Essence
+10: Bean Essence
+19: Mineral Peel Face
+23: Glycolic Acid Toning Solution
+32: Health Hair Shampoo
+Enter number of Product Name: 23
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iH9XqEwMU10 
+[youtube] iH9XqEwMU10: Downloading webpage
+[youtube] iH9XqEwMU10: Downloading ios player API JSON 
+[youtube] iH9XqEwMU10: Downloading web creator player API JSON 
+[youtube] iH9XqEwMU10: Downloading m3u8 information 
+[info] iH9XqEwMU10: Downloading 1 format(s): 251 
+[download] Destination: audio\The Ordinary Glycolic Acid Toning Solution Review - 3 Ways to Use To Glycolic 7% Toner.mp3 
+[download] 100% of    9.23MiB in 00:00:01 at 6.37MiB/s
+The Ordinary Glycolic Acid Toning Solution Review - 3 Ways to Use To Glycolic 7% Toner
+[youtube] Extracting URL: https://www.youtube.com/watch?v=iH9XqEwMU10
+[youtube] iH9XqEwMU10: Downloading webpage
+[youtube] iH9XqEwMU10: Downloading ios player API JSON 
+[youtube] iH9XqEwMU10: Downloading web creator player API JSON 
+[youtube] iH9XqEwMU10: Downloading m3u8 information 
+[info] iH9XqEwMU10: Downloading 1 format(s): 251 
+[download] audio\The Ordinary Glycolic Acid Toning Solution Review - 3 Ways to Use To Glycolic 7% Toner.mp3 has already been downloaded
+[download] 100% of    9.23MiB
+Downloaded audio from https://www.youtube.com/watch?v=iH9XqEwMU10
+[youtube] Extracting URL: https://www.youtube.com/shorts/uxRsAk9mGYE 
+[youtube] uxRsAk9mGYE: Downloading webpage
+[youtube] uxRsAk9mGYE: Downloading ios player API JSON 
+[youtube] uxRsAk9mGYE: Downloading web creator player API JSON 
+[youtube] uxRsAk9mGYE: Downloading m3u8 information 
+[info] uxRsAk9mGYE: Downloading 1 format(s): 251 
+[download] Destination: audio\The Ordinary Glycolic Acid 7% Exfoliating Toner.mp3 
+[download] 100% of  758.07KiB in 00:00:00 at 5.29MiB/s
+The Ordinary Glycolic Acid 7% Exfoliating Toner
+[youtube] Extracting URL: https://www.youtube.com/shorts/uxRsAk9mGYE
+[youtube] uxRsAk9mGYE: Downloading webpage
+[youtube] uxRsAk9mGYE: Downloading ios player API JSON 
+[youtube] uxRsAk9mGYE: Downloading web creator player API JSON 
+[youtube] uxRsAk9mGYE: Downloading m3u8 information 
+[info] uxRsAk9mGYE: Downloading 1 format(s): 251 
+[download] audio\The Ordinary Glycolic Acid 7% Exfoliating Toner.mp3 has already been downloaded 
+[download] 100% of  758.07KiB
+Downloaded audio from https://www.youtube.com/shorts/uxRsAk9mGYE
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2nVDXt7hw28 
+[youtube] 2nVDXt7hw28: Downloading webpage
+[youtube] 2nVDXt7hw28: Downloading ios player API JSON 
+[youtube] 2nVDXt7hw28: Downloading web creator player API JSON 
+[youtube] 2nVDXt7hw28: Downloading player 3c3d6e4f 
+[youtube] 2nVDXt7hw28: Downloading m3u8 information 
+[info] 2nVDXt7hw28: Downloading 1 format(s): 251 
+[download] Destination: audio\Glycolic Acid 7% Toning Solution The Ordinary Skincare Routine - Useless？.mp3 
+[download] 100% of    4.02MiB in 00:00:01 at 3.94MiB/s
+Glycolic Acid 7% Toning Solution The Ordinary Skincare Routine - Useless?
+[youtube] Extracting URL: https://www.youtube.com/watch?v=2nVDXt7hw28
+[youtube] 2nVDXt7hw28: Downloading webpage
+[youtube] 2nVDXt7hw28: Downloading ios player API JSON 
+[youtube] 2nVDXt7hw28: Downloading web creator player API JSON 
+[youtube] 2nVDXt7hw28: Downloading m3u8 information 
+[info] 2nVDXt7hw28: Downloading 1 format(s): 251 
+[download] audio\Glycolic Acid 7% Toning Solution The Ordinary Skincare Routine - Useless？.mp3 has already been downloaded 
+[download] 100% of    4.02MiB
+Downloaded audio from https://www.youtube.com/watch?v=2nVDXt7hw28
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Tt1MAKIdLqE 
+[youtube] Tt1MAKIdLqE: Downloading webpage
+[youtube] Tt1MAKIdLqE: Downloading ios player API JSON 
+[youtube] Tt1MAKIdLqE: Downloading web creator player API JSON 
+[youtube] Tt1MAKIdLqE: Downloading m3u8 information 
+[info] Tt1MAKIdLqE: Downloading 1 format(s): 251 
+[download] Destination: audio\The Ordinary Glycolic Acid 7% Toning Solution ＊30 Day Results＊ + Pictures.mp3 
+[download] 100% of    9.35MiB in 00:00:01 at 8.45MiB/s
+The Ordinary Glycolic Acid 7% Toning Solution *30 Day Results* + Pictures
+[youtube] Extracting URL: https://www.youtube.com/watch?v=Tt1MAKIdLqE
+[youtube] Tt1MAKIdLqE: Downloading webpage
+[youtube] Tt1MAKIdLqE: Downloading ios player API JSON 
+[youtube] Tt1MAKIdLqE: Downloading web creator player API JSON 
+[youtube] Tt1MAKIdLqE: Downloading m3u8 information 
+[info] Tt1MAKIdLqE: Downloading 1 format(s): 251 
+[download] audio\The Ordinary Glycolic Acid 7% Toning Solution ＊30 Day Results＊ + Pictures.mp3 has already been downloaded
+
+[download] 100% of    9.35MiB
+Downloaded audio from https://www.youtube.com/watch?v=Tt1MAKIdLqE
+[youtube] Extracting URL: https://www.youtube.com/watch?v=6b8YEBO4Tak 
+[youtube] 6b8YEBO4Tak: Downloading webpage
+[youtube] 6b8YEBO4Tak: Downloading ios player API JSON 
+[youtube] 6b8YEBO4Tak: Downloading web creator player API JSON 
+[youtube] 6b8YEBO4Tak: Downloading m3u8 information 
+[info] 6b8YEBO4Tak: Downloading 1 format(s): 251 
+[download] Destination: audio\How To Use The Ordinary Glycolic Acid 7% Toning Solution.mp3 
+[download] 100% of    3.81MiB in 00:00:00 at 4.43MiB/s
+How To Use The Ordinary Glycolic Acid 7% Toning Solution
+[youtube] Extracting URL: https://www.youtube.com/watch?v=6b8YEBO4Tak
+[youtube] 6b8YEBO4Tak: Downloading webpage
+[youtube] 6b8YEBO4Tak: Downloading ios player API JSON 
+[youtube] 6b8YEBO4Tak: Downloading web creator player API JSON 
+[youtube] 6b8YEBO4Tak: Downloading m3u8 information 
+[info] 6b8YEBO4Tak: Downloading 1 format(s): 251 
+[download] audio\How To Use The Ordinary Glycolic Acid 7% Toning Solution.mp3 has already been downloaded 
+[download] 100% of    3.81MiB
+Downloaded audio from https://www.youtube.com/watch?v=6b8YEBO4Tak
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qCJHVOO8foQ 
+[youtube] qCJHVOO8foQ: Downloading webpage
+[youtube] qCJHVOO8foQ: Downloading ios player API JSON 
+[youtube] qCJHVOO8foQ: Downloading web creator player API JSON 
+[youtube] qCJHVOO8foQ: Downloading m3u8 information 
+[info] qCJHVOO8foQ: Downloading 1 format(s): 251 
+[download] Destination: audio\How to use The Ordinary Glycolic Acid 7% Toning Solution ｜ Full Demonstration.mp3 
+[download] 100% of    5.06MiB in 00:00:00 at 6.64MiB/s
+How to use The Ordinary Glycolic Acid 7% Toning Solution | Full Demonstration
+[youtube] Extracting URL: https://www.youtube.com/watch?v=qCJHVOO8foQ
+[youtube] qCJHVOO8foQ: Downloading webpage
+[youtube] qCJHVOO8foQ: Downloading ios player API JSON 
+[youtube] qCJHVOO8foQ: Downloading web creator player API JSON 
+[youtube] qCJHVOO8foQ: Downloading m3u8 information 
+[info] qCJHVOO8foQ: Downloading 1 format(s): 251 
+[download] audio\How to use The Ordinary Glycolic Acid 7% Toning Solution ｜ Full Demonstration.mp3 has already been downloaded
+[download] 100% of    5.06MiB
+Downloaded audio from https://www.youtube.com/watch?v=qCJHVOO8foQ
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MQSM1kHdyRw 
+[youtube] MQSM1kHdyRw: Downloading webpage
+[youtube] MQSM1kHdyRw: Downloading ios player API JSON 
+[youtube] MQSM1kHdyRw: Downloading web creator player API JSON 
+[youtube] MQSM1kHdyRw: Downloading m3u8 information 
+[info] MQSM1kHdyRw: Downloading 1 format(s): 251 
+[download] Destination: audio\I Tested The Ordinary Glycolic Acid Toner Every Day For A Week & This Happened.mp3 
+[download] 100% of    7.39MiB in 00:00:00 at 7.98MiB/s
+I Tested The Ordinary Glycolic Acid Toner Every Day For A Week & This Happened
+[youtube] Extracting URL: https://www.youtube.com/watch?v=MQSM1kHdyRw
+[youtube] MQSM1kHdyRw: Downloading webpage
+[youtube] MQSM1kHdyRw: Downloading ios player API JSON 
+[youtube] MQSM1kHdyRw: Downloading web creator player API JSON 
+[youtube] MQSM1kHdyRw: Downloading m3u8 information 
+[info] MQSM1kHdyRw: Downloading 1 format(s): 251 
+[download] audio\I Tested The Ordinary Glycolic Acid Toner Every Day For A Week & This Happened.mp3 has already been downloaded
+[download] 100% of    7.39MiB
+Downloaded audio from https://www.youtube.com/watch?v=MQSM1kHdyRw
+Duplicate found: Does the Viral Mixsoon Bean Essence Actually Work？.mp3
+Uploading Glycolic Acid 7% Toning Solution The Ordinary Skincare Routine - Useless？.mp3 to Otter.ai
+Duplicate found: How To Use Mixsoon Bean Essence.mp3
+Uploading How to use The Ordinary Glycolic Acid 7% Toning Solution ｜ Full Demonstration.mp3 to Otter.ai
+Uploading How To Use The Ordinary Glycolic Acid 7% Toning Solution.mp3 to Otter.ai
+Uploading I Tested The Ordinary Glycolic Acid Toner Every Day For A Week & This Happened.mp3 to Otter.ai
+Duplicate found: Late to the game but reviewing the FAMOUS BEAN ESSENCE ft. Mixsoon! Worth it？🤔.mp3
+Duplicate found: Meet the Viral Mixsoon Bean Essence✨.mp3
+Duplicate found: mixsoon l How to use bean essence.mp3
+Duplicate found: O.R.G SKINCARE MINERAL PEEL FACE REVIEW.mp3
+Duplicate found: ORG Skincare Mineral Peel Face Review & Demo ｜ #FaceMaskFriday 37 ｜ CORRIE V.mp3
+Duplicate found: Skin prep for summer skin by using Mixsoon’s Bean Essence ❤️ @mixsoon.mp3
+Uploading The Ordinary Glycolic Acid 7% Exfoliating Toner.mp3 to Otter.ai
+Uploading The Ordinary Glycolic Acid 7% Toning Solution ＊30 Day Results＊ + Pictures.mp3 to Otter.ai
+Uploading The Ordinary Glycolic Acid Toning Solution Review - 3 Ways to Use To Glycolic 7% Toner.mp3 to Otter.ai
+Duplicate found: USE THIS INSTEAD OF SNAIL MUCIN ! ⚠️｜ #viralskincare #skincare #kbeauty #koreanskincare.mp3
+[TextBlock(text="Here are the key points about the Mixon Bean Essence product based on the transcripts:\n\n- It is a popular Korean skincare essence that provides benefits similar to snail mucin essences, but is vegan-friendly as it uses fermented soybean extract instead of snail mucin. \n\n- The key ingredients are 100% fermented bean extract, fermented barley, fermented pomegranate and fermented Korean pear. These provide nourishment, reduce oil production, offer antioxidant protection, improve skin texture and increase elasticity.\n\n- It can be used in two ways - as a gentle exfoliant by massaging it into the skin for a few minutes 2-3 times per week, or as a daily essence patted into the skin. \n\n- When used as an exfoliant, it visibly removes dead skin cells and impurities. However, if the skin is too dry or was recently exfoliated, particles may not come out.\n\n- As an essence, it hydrates, firms and prepares the skin for subsequent skincare steps. The natural ingredients aim to not irritate the skin.\n\n- A little product goes a long way. It's recommended to do a patch test first and incorporate it into a full skincare routine with serums and moisturizers.\n\nIn summary, the Mixon Bean Essence is a multi-use, vegan essence that gently exfoliates and hydrates the skin with fermented plant-based ingredients to improve skin texture and appearance with minimal irritation. Its unique formula and viral popularity make it a standout product in the Korean skincare market.", type='text')]
+Links:
+Are you sure you want to clear the audio and texts directories? (y/n): n
+Directories not cleared.
+0: Advanced Snail 96 Mucin Power Essence
+10: Bean Essence
+19: Mineral Peel Face
+23: Glycolic Acid Toning Solution
+32: Health Hair Shampoo
+Enter number of Product Name: 32
+Traceback (most recent call last):
+  File "C:\Users\sam\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+    return self._range.index(new_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 37 is not in range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\sam\Documents\Landing-International-Sam\Interpreter-Project\main.py", line 116, in <module>
+    main()
+  File "c:\Users\sam\Documents\Landing-International-Sam\Interpreter-Project\main.py", line 96, in main
+    links = get_video_links(int(number), df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\sam\Documents\Landing-International-Sam\Interpreter-Project\main.py", line 80, in get_video_links
+    if pd.isna(dataframe["Video Sermon"][index+1]):
+               ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\sam\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1112, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sam\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1228, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sam\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+    raise KeyError(key) from err
+KeyError: 37
+PS C:\Users\sam\Documents\Landing-International-Sam\Interpreter-Project>
