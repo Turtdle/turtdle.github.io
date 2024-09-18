@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './BeautyProductWebsite';
 import './index.css';
-import {onWebsiteLoadBeautyProductWebsite} from './BeautyProductWebsite';
 const Home = () => {
   const onWebsiteLoad = () => {
     console.log('Website loaded');
@@ -124,7 +123,7 @@ const Home = () => {
             className="bg-white text-gray-800 font-bold py-3 px-6 rounded-full text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
           <button
-            type="submit"
+            type="Submit"
             className="bg-gray-800 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-gray-700 transition duration-300 ml-4"
           >
             Submit
