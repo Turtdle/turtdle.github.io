@@ -9,7 +9,7 @@ import './index.css';
 const Home = () => {
   const onWebsiteLoad = () => {
     console.log('Website loaded');
-    // Add any other logic you want to run on load
+    // Add any other logic you want to run on load 1
   };
 
   // Use useEffect to run the function when the component mounts

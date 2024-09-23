@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+!public/.well-known
+!public/.nojekyll
 # testing
 /coverage
 
