@@ -40,6 +40,7 @@ const ProductVideo = ({ username, views, length, summary, thumbnail, link }) => 
 const BeautyProductWebsite = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [videos, setVideos] = useState([]);
+  const [productSummaries, setProductSummaries] = useState({});
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -51,7 +52,20 @@ const BeautyProductWebsite = () => {
         const csvData = await response.text();
         const parsedData = Papa.parse(csvData, { header: true }).data;
         console.log('Parsed Data:', parsedData);
-        setVideos(parsedData.filter(video => video.product));
+        
+        // Filter out summary entries and set videos
+        const videoEntries = parsedData.filter(entry => !entry.username.startsWith('summary_'));
+        setVideos(videoEntries);
+        
+        // Extract and set product summaries
+        const summaries = {};
+        parsedData.forEach(entry => {
+          if (entry.username.startsWith('summary_')) {
+            const productName = entry.username.replace('summary_', '');
+            summaries[productName.toLowerCase()] = entry.summary;
+          }
+        });
+        setProductSummaries(summaries);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -75,6 +89,41 @@ const BeautyProductWebsite = () => {
         link={video.link}
       />
     ));
+  };
+
+  const renderTrendReport = () => {
+    if (searchQuery.trim() === '') {
+      return (
+        <>
+          <h2 className="text-2xl font-bold mb-4">Trend Report</h2>
+          <p className="text-gray-600 mb-8">
+            Our AI-generated summaries provide a snapshot of what people are saying about the latest beauty products. With each search, you'll get a quick overview of all the product videos approved by industry veterans.
+          </p>
+        </>
+      );
+    }
+
+    const matchedProduct = Object.keys(productSummaries).find(product => 
+      product.includes(searchQuery.toLowerCase())
+    );
+
+    if (matchedProduct && productSummaries[matchedProduct]) {
+      return (
+        <>
+          <h2 className="text-2xl font-bold mb-4">AI-Generated Summary for {matchedProduct.charAt(0).toUpperCase() + matchedProduct.slice(1)}</h2>
+          <p className="text-gray-600 mb-8">{productSummaries[matchedProduct]}</p>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <h2 className="text-2xl font-bold mb-4">Trend Report</h2>
+          <p className="text-gray-600 mb-8">
+            Our AI-generated summaries provide a snapshot of what people are saying about the latest beauty products. With each search, you'll get a quick overview of all the product videos approved by industry veterans.
+          </p>
+        </>
+      );
+    }
   };
 
   return (
@@ -139,11 +188,8 @@ const BeautyProductWebsite = () => {
                 />
               </div>
               <CardHeader>
-                <h2 className="text-2xl font-bold mb-4">Trend Report</h2>
+                {renderTrendReport()}
               </CardHeader>
-              <p className="text-gray-600 mb-8">
-                Our AI-generated summaries provide a snapshot of what people are saying about the latest beauty products. With each search, you'll get a quick overview of all the product videos approved by industry veterans.
-              </p>
 
               {renderProductVideos()}
             </CardContent>
