@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log('Website loaded');
-    // Add any other logic you wa   nt to run on load
+    // Add any other logic you wa     nt to run on load
   }, []);
 
   const particlesInit = useCallback(async engine => {
