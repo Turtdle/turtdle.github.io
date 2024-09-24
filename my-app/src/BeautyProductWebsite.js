@@ -53,7 +53,7 @@ const BeautyProductWebsite = () => {
         const parsedData = Papa.parse(csvData, { header: true }).data;
         console.log('Parsed Data:', parsedData);
         
-        // Filter out summary entries and set videos
+        // Filter out summary entr ies and set videos
         const videoEntries = parsedData.filter(entry => !entry.username.startsWith('summary_'));
         setVideos(videoEntries);
         
