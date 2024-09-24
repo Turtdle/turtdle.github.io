@@ -5,20 +5,19 @@ import { loadSlim } from "tsparticles-slim";
 import ReactDOM from 'react-dom';
 import App from './App';
 import './BeautyProductWebsite';
+import { Linkedin } from 'lucide-react'; 
+import { Github } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import './index.css';
 const Home = () => {
-  const onWebsiteLoad = () => {
-    console.log('Website loaded');
-    // Add any other logic you want to run on load 1
-  };
-
-  // Use useEffect to run the function when the component mounts
-  useEffect(() => {
-    onWebsiteLoad();
-    //onWebsiteLoadBeautyProductWebsite();
-  }, []);
   const navigate = useNavigate();
   const [pageCode, setPageCode] = useState('');
+
+  useEffect(() => {
+    console.log('Website loaded');
+    // Add any other logic you want to run on load
+  }, []);
 
   const particlesInit = useCallback(async engine => {
     console.log(engine);
@@ -39,16 +38,24 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative z+100 relative">
+    <div className="min-h-screen flex flex-col items-center justify-center relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style={{
+          backgroundImage: "url('bg.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+
       <Particles
+        className="absolute inset-0 z-10"
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
           background: {
-            color: {
-              value: "#131862", // Fallback color
-            },
+            opacity: 0,
           },
           fpsLimit: 120,
           interactivity: {
@@ -107,24 +114,38 @@ const Home = () => {
         }}
       />
 
-      <div className="text-center z-10 relative">
-        <h1 className="text-5xl font-bold text-gray-800 mb-6">
+      <div className="text-center z-20 relative">
+        <h1 className="text-5xl font-bold text-white mb-6">
           Welcome
         </h1>
-        <p className="text-xl text-gray-700 mb-8">
-          Here is the directory.
+        <p className="text-xl text-white mb-4">
+          Enter page code or click on the links below
         </p>
-        <form onSubmit={handleSubmit}>
+        <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg mb-6 flex justify-center items-center">
+          <a href="https://www.linkedin.com/in/samuel-wan-384a45222/" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <Linkedin size={24} color="white" />
+          </a>
+          <a href="https://github.com/Turtdle" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <Github size={24} color="white" />
+          </a>
+          <a href="mailto:sam@wanfamily.org" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <Mail size={24} color="white" />
+          </a>
+          <a href="https://www.instagram.com/sam.wan__" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <Instagram size={24} color="white" />
+          </a>
+        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col items-center">
           <input
             type="text"
             value={pageCode}
             onChange={(e) => setPageCode(e.target.value)}
             placeholder="Enter page code"
-            className="bg-white text-gray-800 font-bold py-3 px-6 rounded-full text-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="bg-white text-gray-800 font-bold py-2 px-4 rounded-full text-base border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 mb-2 w-64"
           />
           <button
-            type="Submit"
-            className="bg-gray-800 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-gray-700 transition duration-300 ml-4"
+            type="submit"
+            className="bg-gray-800 text-white font-bold py-2 px-4 rounded-full text-base hover:bg-gray-700 transition duration-300"
           >
             Submit
           </button>

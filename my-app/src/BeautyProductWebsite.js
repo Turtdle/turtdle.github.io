@@ -78,6 +78,9 @@ const BeautyProductWebsite = () => {
   );
 
   const renderProductVideos = () => {
+    if (searchQuery.trim() === '') {
+      return null;
+    }
     return filteredVideos.slice(0, 3).map((video, index) => (
       <ProductVideo
         key={index}
@@ -190,7 +193,6 @@ const BeautyProductWebsite = () => {
               <CardHeader>
                 {renderTrendReport()}
               </CardHeader>
-
               {renderProductVideos()}
             </CardContent>
           </Card>
@@ -199,5 +201,6 @@ const BeautyProductWebsite = () => {
     </div>
   );
 };
+
 
 export default BeautyProductWebsite;
