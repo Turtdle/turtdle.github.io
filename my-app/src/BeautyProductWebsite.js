@@ -47,7 +47,7 @@ const BeautyProductWebsite = () => {
       try {
         const response = await fetch('/video.csv');
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`HTTP error ! status: ${response.status}`);
         }
         const csvData = await response.text();
         const parsedData = Papa.parse(csvData, { header: true }).data;
