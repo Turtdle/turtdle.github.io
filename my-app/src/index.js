@@ -8,7 +8,7 @@ import './BeautyProductWebsite';
 import { Linkedin } from 'lucide-react'; 
 import { Github } from 'lucide-react';
 import { Mail } from 'lucide-react';
-import { Instagram } from 'lucide-react';
+import { Instagram, Keyboard} from 'lucide-react';
 import './index.css';
 const Home = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log('Website loaded');
-    // Add any other logic you want to run on load
+    // Add any other logic you wa   nt to run on load
   }, []);
 
   const particlesInit = useCallback(async engine => {
@@ -133,6 +133,9 @@ const Home = () => {
           </a>
           <a href="https://www.instagram.com/sam.wan__" target="_blank" rel="noopener noreferrer" className="mx-2">
             <Instagram size={24} color="white" />
+          </a>
+          <a href="https://monkeytype.com/profile/Tourt/" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <Keyboard size={24} color="white" />
           </a>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
