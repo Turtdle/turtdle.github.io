@@ -81,7 +81,7 @@ const BeautyProductWebsite = () => {
     if (searchQuery.trim() === '') {
       return null;
     }
-    return filteredVideos.slice(0, 3).map((video, index) => (
+    return filteredVideos.map((video, index) => (
       <ProductVideo
         key={index}
         username={video.username}
