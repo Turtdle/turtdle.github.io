@@ -6,8 +6,8 @@ import Papa from 'papaparse';
 const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">{children}</div>;
 const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;
-
-const ProductVideo = ({ username, views, length, summary, thumbnail, link }) => (
+//username of content creator, views, length of video, summary of video, thumbnail of video, link to video, title of video, tags of video (list of tags)
+const ProductVideo = ({ username, views, length, summary, thumbnail, link, title, tags}) => (
   <div className="mt-4 flex">
     <div className="w-1/3 mr-4">
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -15,26 +15,24 @@ const ProductVideo = ({ username, views, length, summary, thumbnail, link }) => 
       </a>
     </div>
     <div className="w-2/3">
+      <p className="text-lg font-bold">{title}</p>
       <p className="text-sm">
         <span className="font-semibold">{username}</span> {views} • {length}
       </p>
       <p className="text-gray-600 text-sm mt-1">{summary}</p>
       <div className="mt-2 flex flex-wrap">
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2">
-          K-Beauty
-        </button>
-        <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2">
-          Gel cleanser   
-        </button>
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2">
-          Good for acne-prone skin
-        </button>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-2 rounded text-sm mb-2">
-          Hydrating
-        </button>
+        {tags.map((tag, index) => (
+          <Tag key={index} tag={tag} />
+        ))}
       </div>
     </div>
   </div>
+);
+const Tag =({tag}) =>(
+  <button className={`bg-${["blue","green","yellow"][tag.charCodeAt(0)%3]}-500 hover:bg-${["blue","green","yellow"][tag.charCodeAt(0)%3]}-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2`}>
+          {tag}
+</button>
+
 );
 
 const BeautyProductWebsite = () => {
@@ -81,7 +79,17 @@ const BeautyProductWebsite = () => {
     if (searchQuery.trim() === '') {
       return null;
     }
+    tags = []
+    //column tag1-tag10 are tags;
+    //put these in an array to past to the ProductVideo component
+    for (let i = 1; i <= 10; i++) {
+      if (video[`tag${i}`]) {
+        tags.push(video[`tag${i}`]);
+      }
+    }
     return filteredVideos.map((video, index) => (
+      
+
       <ProductVideo
         key={index}
         username={video.username}
@@ -90,6 +98,8 @@ const BeautyProductWebsite = () => {
         summary={video.summary}
         thumbnail={video.thumbnail}
         link={video.link}
+        title={video.title}
+        tags={tags}
       />
     ));
   };
