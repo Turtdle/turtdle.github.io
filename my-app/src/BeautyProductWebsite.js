@@ -6,12 +6,12 @@ import Papa from 'papaparse';
 const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">{children}</div>;
 const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;
-//username of content creator, views, length of video, summary of video, thumbnail of video, link to video, title of video, tags of video (list of tags)
-const ProductVideo = ({ username, views, length, summary, thumbnail, link, title, tags}) => (
+
+const ProductVideo = ({ username, views, length, summary, thumbnail, link, title, tags }) => (
   <div className="mt-4 flex">
     <div className="w-1/3 mr-4">
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={thumbnail} alt="Placeholder" className="w-full rounded-lg" />
+        <img src={thumbnail} alt="Video thumbnail" className="w-full rounded-lg" />
       </a>
     </div>
     <div className="w-2/3">
@@ -28,12 +28,18 @@ const ProductVideo = ({ username, views, length, summary, thumbnail, link, title
     </div>
   </div>
 );
-const Tag =({tag}) =>(
-  <button className={`bg-${["blue","green","yellow"][tag.charCodeAt(0)%3]}-500 hover:bg-${["blue","green","yellow"][tag.charCodeAt(0)%3]}-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2`}>
-          {tag}
-</button>
 
-);
+const Tag = ({ tag }) => {
+  const colors = ["blue", "green", "yellow"];
+  const colorIndex = tag.charCodeAt(0) % 3;
+  const bgColor = colors[colorIndex];
+  
+  return (
+    <button className={`bg-${bgColor}-500 hover:bg-${bgColor}-600 text-white font-semibold py-1 px-2 rounded text-sm mr-2 mb-2`}>
+      {tag}
+    </button>
+  );
+};
 
 const BeautyProductWebsite = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,13 +51,13 @@ const BeautyProductWebsite = () => {
       try {
         const response = await fetch('/video.csv');
         if (!response.ok) {
-          throw new Error(`HTTP error ! status: ${response.status}`);
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
         const csvData = await response.text();
         const parsedData = Papa.parse(csvData, { header: true }).data;
         console.log('Parsed Data:', parsedData);
         
-        // Filter out summary entr ies and set videos
+        // Filter out summary entries and set videos
         const videoEntries = parsedData.filter(entry => !entry.username.startsWith('summary_'));
         setVideos(videoEntries);
         
@@ -79,29 +85,31 @@ const BeautyProductWebsite = () => {
     if (searchQuery.trim() === '') {
       return null;
     }
-    tags = []
-    //column tag1-tag10 are tags;
-    //put these in an array to past to the ProductVideo component
-    for (let i = 1; i <= 10; i++) {
-      if (video[`tag${i}`]) {
-        tags.push(video[`tag${i}`]);
+    
+    return filteredVideos.map((video, index) => {
+      const tags = [];
+      //column tag1-tag10 are tags;
+      //put these in an array to pass to the ProductVideo component
+      for (let i = 1; i <= 10; i++) {
+        if (video[`tag${i}`]) {
+          tags.push(video[`tag${i}`]);
+        }
       }
-    }
-    return filteredVideos.map((video, index) => (
       
-
-      <ProductVideo
-        key={index}
-        username={video.username}
-        views={video.views}
-        length={video.length}
-        summary={video.summary}
-        thumbnail={video.thumbnail}
-        link={video.link}
-        title={video.title}
-        tags={tags}
-      />
-    ));
+      return (
+        <ProductVideo
+          key={index}
+          username={video.username}
+          views={video.views}
+          length={video.length}
+          summary={video.summary}
+          thumbnail={video.thumbnail}
+          link={video.link}
+          title={video.name}
+          tags={tags}
+        />
+      );
+    });
   };
 
   const renderTrendReport = () => {
@@ -137,7 +145,7 @@ const BeautyProductWebsite = () => {
         </>
       );
     }
-  };
+  };  
 
   return (
     <div className="bg-white">
