@@ -186,12 +186,6 @@ const BeautyProductWebsite = () => {
         <h2 className="text-xl font-medium text-gray-900 mb-4">
           Finding helpful product review videos takes time. We do it for you in seconds. Get up to speed on the latest beauty products from industry-vetted videos that actually help you decide what's right for you.
         </h2>
-        <a
-          href="#"
-          className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-        >
-          Sign up
-        </a>
 
         <div className="mt-12 w-full">
           <Card>
