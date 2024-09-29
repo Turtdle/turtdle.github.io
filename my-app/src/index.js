@@ -122,7 +122,7 @@ const Home = () => {
           Enter page code or click on the links below
         </p>
         <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg mb-6 flex justify-center items-center">
-          <a href="https://www.linkedin.com/in/samuel-wan-384a45222/" target="_blank" rel="noopener noreferrer" className="mx-2">
+          <a href="https://www.linkedin.com/in/samuel-c-wan/" target="_blank" rel="noopener noreferrer" className="mx-2">
             <Linkedin size={24} color="white" />
           </a>
           <a href="https://github.com/Turtdle" target="_blank" rel="noopener noreferrer" className="mx-2">

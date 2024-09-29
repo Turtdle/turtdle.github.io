@@ -1,6 +1,5 @@
 import { Search } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import './index.css';
 import Papa from 'papaparse';
 
 const Card = ({ children }) => <div className="border rounded-lg shadow-lg p-4">{children}</div>;
@@ -8,13 +7,13 @@ const CardHeader = ({ children }) => <div className="mb-4">{children}</div>;
 const CardContent = ({ children }) => <div>{children}</div>;
 
 const ProductVideo = ({ username, views, length, summary, thumbnail, link, title, tags }) => (
-  <div className="mt-4 flex">
-    <div className="w-1/3 mr-4">
+  <div className="mt-4 flex flex-col md:flex-row">
+    <div className="w-full md:w-1/3 md:mr-4 mb-4 md:mb-0">
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={thumbnail} alt="Video thumbnail" className="w-full rounded-lg" />
+        <img src={thumbnail} alt="Video thumbnail" className="w-full rounded-lg flex-row" />
       </a>
     </div>
-    <div className="w-2/3">
+    <div className="w-full md:w-2/3">
       <p className="text-lg font-bold">{title}</p>
       <p className="text-sm">
         <span className="font-semibold">{username}</span> {views} • {length}
@@ -27,7 +26,7 @@ const ProductVideo = ({ username, views, length, summary, thumbnail, link, title
       </div>
     </div>
   </div>
-);
+);  
 
 const Tag = ({ tag }) => {
   const colors = ["blue", "green", "yellow"];
@@ -57,11 +56,9 @@ const BeautyProductWebsite = () => {
         const parsedData = Papa.parse(csvData, { header: true }).data;
         console.log('Parsed Data:', parsedData);
         
-        // Filter out summary entries and set videos
         const videoEntries = parsedData.filter(entry => !entry.username.startsWith('summary_'));
         setVideos(videoEntries);
         
-        // Extract and set product summaries
         const summaries = {};
         parsedData.forEach(entry => {
           if (entry.username.startsWith('summary_')) {
@@ -88,8 +85,6 @@ const BeautyProductWebsite = () => {
     
     return filteredVideos.map((video, index) => {
       const tags = [];
-      //column tag1-tag10 are tags;
-      //put these in an array to pass to the ProductVideo component
       for (let i = 1; i <= 10; i++) {
         if (video[`tag${i}`]) {
           tags.push(video[`tag${i}`]);
@@ -150,20 +145,20 @@ const BeautyProductWebsite = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+        <div className="flex flex-col sm:flex-row justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+          <div className="flex justify-start lg:w-0 lg:flex-1 mb-4 sm:mb-0">
             <span className="text-2xl font-bold text-gray-900">Landing International</span>
           </div>
           <div className="flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="/"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+              className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
             >
               Home
             </a>
             <a
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+              className="ml-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
             >
               Log In
             </a>
@@ -213,6 +208,5 @@ const BeautyProductWebsite = () => {
     </div>
   );
 };
-
 
 export default BeautyProductWebsite;
