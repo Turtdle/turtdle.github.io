@@ -8,11 +8,34 @@ import './BeautyProductWebsite';
 import { Linkedin } from 'lucide-react'; 
 import { Github } from 'lucide-react';
 import { Mail } from 'lucide-react';
-import { Instagram, Keyboard, } from 'lucide-react';
+import { Instagram, Keyboard, ChevronRight, ChevronLeft } from 'lucide-react';
 import './index.css';
+const GitHubCard = ({ username, width }) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/github-cards/latest/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div 
+      className="github-card" 
+      data-github={username} 
+      data-width={width} 
+      data-height="" 
+      data-theme="default"
+    ></div>
+  );
+};
 const Home = () => {
   const navigate = useNavigate();
   const [pageCode, setPageCode] = useState('');
+  const [isPopoutOpen, setIsPopoutOpen] = useState(false);
 
   useEffect(() => {
     console.log('Website loaded');
@@ -35,6 +58,10 @@ const Home = () => {
     } else if (pageCode.toLowerCase() === 'nhung') {
       window.location.href = 'https://www.linkedin.com/in/nathan-hung-3a7a00229/';
     }
+  };
+
+  const togglePopout = () => {
+    setIsPopoutOpen(!isPopoutOpen);
   };
 
   return (
@@ -137,8 +164,8 @@ const Home = () => {
           <a href="https://monkeytype.com/profile/Tourt/" target="_blank" rel="noopener noreferrer" className="mx-2">
             <Keyboard size={24} color="white" />
           </a>
-          <a href = "https://leetcode.com/u/tourt/" target="_blank" rel="noopener noreferrer" className="mx-2">
-            <img src="https://img.icons8.com/color/48/000000/leetcode.png"/>
+          <a href="https://leetcode.com/u/tourt/" target="_blank" rel="noopener noreferrer" className="mx-2">
+            <img src="https://img.icons8.com/color/48/000000/leetcode.png" alt="LeetCode" className="w-6 h-6"/>
           </a>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
@@ -157,7 +184,38 @@ const Home = () => {
           </button>
         </form>
       </div>
-    </div>  
+
+       {/* Updated Popout with GitHub Card */}
+      <div 
+        className={`fixed left-0 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${isPopoutOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        style={{zIndex: 30}}
+      >
+        <div className="bg-white p-4 rounded-r-lg shadow-lg" style={{width: '400px', minHeight: '200px'}}>
+          <h2 className="text-xl font-bold mb-4">GitHub</h2>
+          <GitHubCard username="Turtdle" width={350} />
+          <GitHubCard username="Turtdle/Game4" width={350} />
+          <GitHubCard username="Turtdle/Ctfs" width={350} />
+          <GitHubCard username="Turtdle/Starcraft2AI" width={350} />
+          <GitHubCard username="Turtdle/QuantumComputerSim" width={350} />
+        </div>
+      </div>
+
+      {/* Updated Arrow button */}
+      <button 
+        onClick={togglePopout}
+        className={`fixed top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-90 p-2 rounded-lg hover:bg-opacity-100 transition-all duration-300 ${
+          isPopoutOpen ? 'left-[400px]' : 'left-0 rounded-l-none'
+        }`}
+        style={{zIndex: 40}}
+      >
+        <ChevronLeft
+          size={24}
+          color="white"
+          className={`transform transition-transform duration-300 ${isPopoutOpen ? 'rotate-180' : ''}`}
+        />
+      </button>
+    </div> 
+  
   );
 };
 
