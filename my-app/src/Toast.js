@@ -66,17 +66,19 @@ const images = [
     }
 ]
 
-class toastgallery extends React.Component {
+class Toastgallery extends React.Component {
     render() {
       return <ImageGallery items={images} />;
     }
   }
 
 const Toast = () => {
+    console.log('Toast');
+    console.log(Toastgallery)
+    const a = <Toastgallery />;
     return (
-        <div>
-            <toastgallery/>
-        </div>
+        <Toastgallery />
     );
-};
+}
+
 export default Toast;
