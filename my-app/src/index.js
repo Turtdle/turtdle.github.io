@@ -203,12 +203,12 @@ const Home = () => {
 
       <button 
         onClick={togglePopout}
-        className={`fixed top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-90 p-2 rounded-lg hover:bg-opacity-100 transition-all duration-300 ${
+        className={`fixed top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-90 p-2 rounded-lg hover:bg-opacity-100 transition-all duration-300 border border-white ${
           isPopoutOpen ? 'left-[400px]' : 'left-0 rounded-l-none'
         }`}
         style={{zIndex: 40}}
       >
-        <ChevronLeft
+        <ChevronRight
           size={24}
           color="white"
           className={`transform transition-transform duration-300 ${isPopoutOpen ? 'rotate-180' : ''}`}
