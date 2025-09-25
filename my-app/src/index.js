@@ -9,7 +9,7 @@ import './Toast';
 import { Linkedin } from 'lucide-react'; 
 import { Github } from 'lucide-react';
 import { Mail } from 'lucide-react';
-import { Instagram, Keyboard, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Instagram, Keyboard, ChevronRight } from 'lucide-react';
 import './index.css';
 const GitHubCard = ({ username, width }) => {
   useEffect(() => {
@@ -56,8 +56,6 @@ const Home = () => {
     e.preventDefault();
     if (pageCode === 'proto') {
       navigate('/beauty-products');
-    } else if (pageCode.toLowerCase() === 'nhung') {
-      window.location.href = 'https://www.linkedin.com/in/nathan-hung-3a7a00229/';
     }else if (pageCode.toLowerCase() === 'toast') {
       navigate('/toast');
     }
