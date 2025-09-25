@@ -18,7 +18,7 @@ const Hall = () => {
                 Honkai Star Rail: The Herta
               </h2>
               <img
-                src={url1}
+                src={'https://i.imgur.com/VN9xrxn.png'}
                 alt="z"
                 style={{
                   width: "100%",
