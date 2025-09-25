@@ -4,6 +4,7 @@ import Home from './index.js';
 import BeautyProductWebsite from './BeautyProductWebsite';
 import Toast from './Toast';
 import './App.css';
+import Hall from './hall.js'; 
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/beauty-products" element={<BeautyProductWebsite />} />
         <Route path="/toast" element={<Toast />} />
+        <Route path="/hall" element={<Hall />} />
       </Routes>
     </Router>
   );
