@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { url1 } from "./urls";
 import KroosterContentExtractor from "./kroos";
 
 const Hall = () => {
+    useEffect(() => {
+    document.title = "Trophy Case";
+  }, []);
   return (
     <div className="flex h-screen bg-dark-gray-500">
       {/* Main Content */}
