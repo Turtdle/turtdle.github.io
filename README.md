@@ -1,4 +1,4 @@
-# Family Quiz — a tiny Kahoot clone
+# Temu Kahoot — a tiny Kahoot clone
 
 A Kahoot-style quiz game for family and friends. No backend, no accounts: the
 host's browser **is** the game server (via [PeerJS](https://peerjs.com/) /

@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <div className="page center">
-      <h1 className="logo">Family Quiz!</h1>
+      <h1 className="logo">Temu Kahoot</h1>
       <div className="card">
         <h2>Join a game</h2>
         <form onSubmit={join} className="stack">
