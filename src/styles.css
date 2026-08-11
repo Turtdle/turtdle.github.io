@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(160deg, #46178f 0%, #2e1065 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  background: #fff;
+  color: #1f1f2e;
+  border-radius: 14px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #46178f;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  font-size: 1.2rem;
+  padding: 12px 14px;
+  border: 2px solid #d0d0e0;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #46178f;
+}
+
+.btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.06s, filter 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn.primary {
+  background: #46178f;
+  color: #fff;
+}
+
+.btn.start {
+  background: #26890c;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 16px 40px;
+}
+
+.btn:disabled {
+  background: #888;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.subtle-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.muted {
+  color: #8a8aa0;
+}
+
+.page > .muted,
+.center .muted {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.error {
+  color: #ff8a9e;
+  font-weight: 600;
+}
+
+.card .error {
+  color: #e21b3c;
+}
+
+.status-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 24px;
+}
+
+.big-emoji {
+  font-size: 3rem;
+}
+
+/* ---- Lobby ---- */
+
+.lobby-card {
+  text-align: center;
+}
+
+.game-code {
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  color: #46178f;
+  margin: 4px 0 8px;
+  padding-left: 0.35em; /* balance the letter-spacing */
+}
+
+.join-link {
+  font-size: 0.85rem;
+  color: #8a8aa0;
+  word-break: break-all;
+  margin-bottom: 12px;
+}
+
+/* ---- Question / answers ---- */
+
+.question-counter {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+  background: #fff;
+  color: #1f1f2e;
+  border-radius: 14px;
+  padding: 22px 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button.answer {
+  cursor: pointer;
+  transition: transform 0.06s, filter 0.15s;
+}
+
+button.answer:hover {
+  filter: brightness(1.12);
+}
+
+button.answer:active {
+  transform: scale(0.98);
+}
+
+.a0 { background: #e21b3c; }
+.a1 { background: #1368ce; }
+.a2 { background: #ffa602; }
+
+.answer-shape {
+  font-size: 1rem;
+}
+
+.answer.dim {
+  opacity: 0.3;
+}
+
+.answer.correct {
+  outline: 4px solid #fff;
+  transform: scale(1.02);
+}
+
+.answer-check {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+.tally {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.next-note {
+  text-align: center;
+}
+
+/* ---- Leaderboard ---- */
+
+.leaderboard {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lb-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f4f4fa;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.lb-row.me {
+  outline: 2px solid #46178f;
+}
+
+.lb-row.disconnected {
+  opacity: 0.45;
+}
+
+.lb-rank {
+  background: #46178f;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.lb-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lb-tag {
+  font-weight: 400;
+  color: #8a8aa0;
+  font-size: 0.85rem;
+}
+
+.lb-check {
+  color: #26890c;
+  font-weight: 900;
+  width: 20px;
+}
+
+.lb-gain {
+  color: #26890c;
+  font-weight: 800;
+}
+
+.lb-score {
+  font-weight: 800;
+  min-width: 52px;
+  text-align: right;
+}
+
+/* ---- Results / podium ---- */
+
+.verdict {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.correct-text { color: #4ade80; }
+.wrong-text { color: #ff8a9e; }
+
+.status-box .correct-text { color: #26890c; }
+
+.rank-line {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.podium-spot {
+  background: #fff;
+  color: #1f1f2e;
+  border-radius: 12px 12px 0 0;
+  padding: 14px 10px;
+  text-align: center;
+  flex: 1;
+  max-width: 160px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.podium-spot.place-1 { min-height: 170px; }
+.podium-spot.place-2 { min-height: 130px; }
+.podium-spot.place-3 { min-height: 100px; }
+
+.podium-spot.empty {
+  background: transparent;
+  box-shadow: none;
+}
+
+.podium-medal { font-size: 2rem; }
+
+.podium-name {
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.podium-score {
+  color: #46178f;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .question-text { font-size: 2rem; }
+  .answer { font-size: 1.4rem; }
+}
