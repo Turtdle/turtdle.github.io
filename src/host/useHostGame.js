@@ -45,6 +45,13 @@ export function useHostGame(questions) {
         questionCount: questions.length,
         question: question ? { text: question.text, answers: question.answers } : null,
         correctAnswerIndex: revealCorrect && question ? question.correctIndex : null,
+        // How many players picked each answer — revealed with the answer.
+        answerCounts: revealCorrect
+          ? [0, 1, 2].map(
+              (i) =>
+                [...game.players.values()].filter((p) => p.lastAnswerIndex === i).length
+            )
+          : null,
         players: [...game.players.values()]
           .map((p) => ({
             id: p.id,
@@ -82,6 +89,7 @@ export function useHostGame(questions) {
         p.answered = false
         p.lastGain = 0
         p.lastCorrect = null
+        p.lastAnswerIndex = null
       }
       broadcast()
     }
@@ -178,6 +186,7 @@ export function useHostGame(questions) {
       if (![0, 1, 2].includes(msg.answerIndex)) return
 
       player.answered = true
+      player.lastAnswerIndex = msg.answerIndex
       const correct = msg.answerIndex === questions[game.questionIndex].correctIndex
       player.lastCorrect = correct
       player.lastGain = correct ? scoreFor(Date.now() - game.questionStartTime) : 0

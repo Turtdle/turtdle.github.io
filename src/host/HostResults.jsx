@@ -1,4 +1,5 @@
 import Leaderboard from '../components/Leaderboard.jsx'
+import AnswerBars from '../components/AnswerBars.jsx'
 
 const SHAPES = ['▲', '◆', '●']
 
@@ -45,6 +46,9 @@ export default function HostResults({ snapshot, onNext }) {
               </div>
             ))}
           </div>
+          {snapshot.answerCounts && (
+            <AnswerBars counts={snapshot.answerCounts} correctIndex={snapshot.correctAnswerIndex} />
+          )}
         </>
       )}
 

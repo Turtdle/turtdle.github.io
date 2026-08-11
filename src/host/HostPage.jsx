@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { HOST_PASSWORD } from '../config.js'
-import { loadQuestions } from '../lib/questions.js'
+import { loadQuestions, loadQuizList } from '../lib/questions.js'
 import { useHostGame } from './useHostGame.js'
 import HostLobby from './HostLobby.jsx'
 import HostQuestion from './HostQuestion.jsx'
@@ -28,8 +28,40 @@ function writeAuth() {
 
 export default function HostPage() {
   const [authed, setAuthed] = useState(readAuth)
+  const [quiz, setQuiz] = useState(null) // { name, file }
   if (!authed) return <PasswordGate onAuthed={() => setAuthed(true)} />
-  return <HostGame />
+  if (!quiz) return <QuizPicker onPick={setQuiz} />
+  return <HostGame quiz={quiz} />
+}
+
+function QuizPicker({ onPick }) {
+  const [list, setList] = useState(null) // null | { error } | array
+  useEffect(() => {
+    loadQuizList()
+      .then(setList)
+      .catch((err) => setList({ error: err.message }))
+  }, [])
+
+  return (
+    <div className="page center">
+      <h1 className="logo">Pick a quiz</h1>
+      {!list && <div className="status-box">Loading quizzes…</div>}
+      {list?.error && <div className="status-box error">Couldn't load quizzes.json: {list.error}</div>}
+      {Array.isArray(list) &&
+        (list.length === 0 ? (
+          <div className="status-box error">quizzes.json has no quizzes.</div>
+        ) : (
+          <div className="quiz-list">
+            {list.map((q) => (
+              <button key={q.file} className="btn quiz-choice" onClick={() => onPick(q)}>
+                {q.name}
+              </button>
+            ))}
+          </div>
+        ))}
+      <a className="subtle-link" href="#/">← Back</a>
+    </div>
+  )
 }
 
 function PasswordGate({ onAuthed }) {
@@ -69,14 +101,14 @@ function PasswordGate({ onAuthed }) {
 }
 
 // Separate component so the PeerJS peer is only created once the password
-// gate has been passed and questions are loaded.
-function HostGame() {
+// gate has been passed and the chosen quiz is loaded.
+function HostGame({ quiz }) {
   const [loaded, setLoaded] = useState(null) // { questions, skipped } | { error }
   useEffect(() => {
-    loadQuestions()
+    loadQuestions(quiz.file)
       .then(setLoaded)
       .catch((err) => setLoaded({ error: err.message }))
-  }, [])
+  }, [quiz])
 
   const questions = loaded?.questions?.length ? loaded.questions : null
   const { snapshot, status, start, next } = useHostGame(questions)
@@ -88,7 +120,7 @@ function HostGame() {
     return <Centered className="error">Couldn't load questions: {loaded.error}</Centered>
   }
   if (loaded.questions.length === 0) {
-    return <Centered className="error">questions.csv has no valid questions.</Centered>
+    return <Centered className="error">"{quiz.name}" has no valid questions.</Centered>
   }
   if (status.state === 'error') {
     return (
@@ -104,7 +136,15 @@ function HostGame() {
 
   switch (snapshot.phase) {
     case 'lobby':
-      return <HostLobby snapshot={snapshot} code={status.code} skipped={loaded.skipped} onStart={start} />
+      return (
+        <HostLobby
+          snapshot={snapshot}
+          code={status.code}
+          skipped={loaded.skipped}
+          quizName={quiz.name}
+          onStart={start}
+        />
+      )
     case 'question':
       return <HostQuestion snapshot={snapshot} />
     case 'results':

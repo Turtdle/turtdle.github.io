@@ -11,8 +11,8 @@ published at https://turtdle.github.io/legacy-website/).
 ## How a game works
 
 1. Open `https://turtdle.github.io/#/host`, enter the host
-   password, and you get a game code + join link. **Keep this tab open — the
-   game runs in it. Don't refresh.**
+   password, pick a quiz set, and you get a game code + join link. **Keep
+   this tab open — the game runs in it. Don't refresh.**
 2. Send the link (or read the 4-letter code aloud). Players open it on their
    phones and enter a name.
 3. Hit **Start game**. Everyone sees the question and three answer buttons.
@@ -26,11 +26,21 @@ name** and keep their score.
 
 ## Editing the questions
 
-All questions live in [`public/questions.csv`](public/questions.csv). Easiest
-workflow: open the file on github.com → click the pencil → edit → commit.
+Quiz sets are CSV files in [`public/quizzes/`](public/quizzes/), and
+[`public/quizzes.json`](public/quizzes.json) is the menu the host picks from:
+
+```json
+[
+  { "name": "General Trivia", "file": "general.csv" },
+  { "name": "Harder Trivia", "file": "harder.csv" }
+]
+```
+
+To add a set: create a new CSV in `public/quizzes/` and add a line to
+`quizzes.json`. Easiest workflow: edit the files on github.com → commit.
 The site rebuilds and redeploys automatically in about a minute.
 
-Format — one row per question, `correct` is `1`, `2`, or `3`:
+CSV format — one row per question, `correct` is `1`, `2`, or `3`:
 
 ```csv
 question,answer1,answer2,answer3,correct

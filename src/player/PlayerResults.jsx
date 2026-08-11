@@ -1,4 +1,5 @@
 import Leaderboard from '../components/Leaderboard.jsx'
+import AnswerBars from '../components/AnswerBars.jsx'
 
 export default function PlayerResults({ snapshot, me, myId }) {
   const gameover = snapshot.phase === 'gameover'
@@ -35,7 +36,12 @@ export default function PlayerResults({ snapshot, me, myId }) {
       {gameover ? (
         <h1 className="logo">🏆 Game over!</h1>
       ) : (
-        <div className="status-box">{verdict}</div>
+        <>
+          <div className="status-box">{verdict}</div>
+          {snapshot.answerCounts && (
+            <AnswerBars counts={snapshot.answerCounts} correctIndex={snapshot.correctAnswerIndex} />
+          )}
+        </>
       )}
 
       {me && rank > 0 && (

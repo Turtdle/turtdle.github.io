@@ -1,13 +1,24 @@
 import Papa from 'papaparse'
 
-// Fetches public/questions.csv at runtime (not bundled), so editing the CSV
-// on github.com redeploys new questions without touching any code.
+// Quiz sets live in public/quizzes/ with public/quizzes.json as the menu —
+// all fetched at runtime (not bundled), so editing them on github.com
+// redeploys new questions without touching any code.
+// 'no-cache' forces revalidation: GitHub Pages caches assets for 10 minutes,
+// which would otherwise serve stale questions right after an edit.
+
+// Returns [{ name, file }] from quizzes.json.
+export async function loadQuizList() {
+  const res = await fetch(import.meta.env.BASE_URL + 'quizzes.json', { cache: 'no-cache' })
+  if (!res.ok) throw new Error(`Could not load quizzes.json (HTTP ${res.status})`)
+  const list = await res.json()
+  if (!Array.isArray(list)) throw new Error('quizzes.json must be a JSON array')
+  return list.filter((q) => q && typeof q.name === 'string' && typeof q.file === 'string')
+}
+
 // Returns { questions: [{ text, answers: [a,b,c], correctIndex }], skipped }.
-export async function loadQuestions() {
-  // 'no-cache' forces revalidation: GitHub Pages caches assets for 10 minutes,
-  // which would otherwise serve stale questions right after an edit.
-  const res = await fetch(import.meta.env.BASE_URL + 'questions.csv', { cache: 'no-cache' })
-  if (!res.ok) throw new Error(`Could not load questions.csv (HTTP ${res.status})`)
+export async function loadQuestions(file) {
+  const res = await fetch(import.meta.env.BASE_URL + 'quizzes/' + file, { cache: 'no-cache' })
+  if (!res.ok) throw new Error(`Could not load quizzes/${file} (HTTP ${res.status})`)
   const text = await res.text()
   const { data } = Papa.parse(text, {
     header: true,

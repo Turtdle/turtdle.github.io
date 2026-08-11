@@ -1,0 +1,4 @@
+[
+  { "name": "General Trivia", "file": "general.csv" },
+  { "name": "Harder Trivia", "file": "harder.csv" }
+]

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Leaderboard from '../components/Leaderboard.jsx'
 
-export default function HostLobby({ snapshot, code, skipped, onStart }) {
+export default function HostLobby({ snapshot, code, skipped, quizName, onStart }) {
   const [copied, setCopied] = useState(false)
   const link = location.origin + location.pathname + '#/play/' + code
   const connectedCount = snapshot.players.filter((p) => p.connected).length
@@ -28,7 +28,7 @@ export default function HostLobby({ snapshot, code, skipped, onStart }) {
           {copied ? 'Copied!' : 'Copy join link'}
         </button>
         <p className="muted small">
-          {snapshot.questionCount} questions loaded
+          {quizName} — {snapshot.questionCount} questions
           {skipped > 0 && ` (${skipped} invalid row${skipped > 1 ? 's' : ''} skipped)`}
         </p>
       </div>
