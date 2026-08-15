@@ -1,4 +1,5 @@
 [
+  { "name": "Wan Family: Two Truths & a Lie", "file": "wan-family.csv" },
   { "name": "General Trivia", "file": "general.csv" },
   { "name": "Harder Trivia", "file": "harder.csv" }
 ]

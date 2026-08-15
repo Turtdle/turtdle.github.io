@@ -23,10 +23,10 @@ body {
 .center {
   align-items: center;
   text-align: center;
-  justify-content: center;
+  /* 'safe' keeps long content (wordy answers) reachable: plain centering
+     overflows off the top of the scroll area and can't be scrolled back to. */
+  justify-content: safe center;
   min-height: 100vh;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .logo {
