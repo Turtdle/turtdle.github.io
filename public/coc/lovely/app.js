@@ -10,7 +10,7 @@ const DISCORD_INVITE = "https://discord.gg/8wmVTaMsVR";
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const num = (n) => (n ?? 0).toLocaleString();
 const pct = (x) => `${Math.round((x || 0) * 100)}%`;
-const th = (level, cls = "") => (level ? `<img class="th ${cls}" src="img/th${level}.png" alt="TH${level}" title="Town Hall ${level}">` : "");
+const th = (level, cls = "") => (level ? `<img class="th ${cls}" src="img/th${level | 0}.png" alt="TH${level | 0}" title="Town Hall ${level | 0}">` : "");
 const stars = (n) => [0, 1, 2].map((i) => `<img class="star" src="img/star_${i < n ? "on" : "off"}.png" alt="">`).join("");
 const star = `<img class="star" src="img/star_on.png" alt="★">`;
 const when = (ts, opts = { month: "short", day: "numeric" }) => (ts ? new Date(ts * 1000).toLocaleString(undefined, opts) : "");
@@ -32,7 +32,7 @@ const playerLink = (tag, name) => `<a href="#/player/${encodeURIComponent(tag)}"
 const tile = (value, label, cls = "") => `<div class="tile"><b class="${cls}">${value}</b><span>${esc(label)}</span></div>`;
 
 function result(r) {
-  if (r.state !== "warEnded") return r.state;
+  if (r.state !== "warEnded") return ["preparation", "inWar"].includes(r.state) ? r.state : "";
   const a = [r.stars[0], r.pct[0]], b = [r.stars[1], r.pct[1]];
   return a[0] > b[0] || (a[0] === b[0] && a[1] > b[1]) ? "W" : a[0] === b[0] && a[1] === b[1] ? "T" : "L";
 }
@@ -81,13 +81,13 @@ function overview() {
     ${tile(num(c.win_streak), "war win streak", "gold")}
     ${tile(`${num(c.record[0])}–${num(c.record[1])}–${num(c.record[2])}`, "wins · ties · losses")}
     ${tile(esc(c.capital_league || "-"), "capital league")}
-    ${tile(`${c.members}/50`, "members")}
-    ${tile(`TH${c.required_th}+`, c.type === "inviteOnly" ? "invite only" : c.type || "")}
+    ${tile(`${num(c.members)}/50`, "members")}
+    ${tile(`TH${num(c.required_th)}+`, c.type === "inviteOnly" ? "invite only" : c.type || "")}
   </div>`;
   if (c.description) html += `<p class="muted">${esc(c.description)}</p>`;
   if (c.labels.length) html += `<div class="labels">${c.labels.map((l) => `<span>${esc(l)}</span>`).join("")}</div>`;
   if (w) html += `<h2>Current war</h2><a href="#/war" class="panel score" style="display:block">${scoreHtml(w)}</a>`;
-  if (cwl) html += `<h2>CWL ${seasonName(cwl.season)}</h2><div class="tiles">${tile(`#${cwl.position} of ${cwl.clans}`, "group position", "gold")}${tile(`${num(cwl.stars)} ${star}`, "stars")}${tile(num(Math.round(cwl.destruction)), "destruction")}</div>`;
+  if (cwl) html += `<h2>CWL ${seasonName(cwl.season)}</h2><div class="tiles">${tile(`#${num(cwl.position)} of ${num(cwl.clans)}`, "group position", "gold")}${tile(`${num(cwl.stars)} ${star}`, "stars")}${tile(num(Math.round(cwl.destruction)), "destruction")}</div>`;
   html += `<h2>Top 3-star rate</h2>${rankList(war3.map((m) => [m, pct(m.war.all.triples / m.war.all.attacks), `${m.war.all.attacks} attacks`]))}`;
   html += `<h2>Top donors this season</h2>${rankList(donors.map((m) => [m, num(m.donations), `received ${num(m.received)}`]))}`;
   return html;
@@ -130,14 +130,14 @@ function warPage() {
   const hit = w.lineup.filter((m) => m.defense.n), held = hit.filter((m) => m.defense.stars < 3);
   let html = `<div class="panel score">${scoreHtml(w)}</div>`;
   if (w.state === "preparation") return html + `<p class="muted center">Preparation day: attacks start in ${until(w.start)}.</p>`;
-  html += `<div class="tiles" style="margin-top:8px">${tile(w.us.total - w.us.used, "our attacks left", "gold")}${tile(hit.length ? `${held.length}/${hit.length}` : "–", "bases held", "win")}${tile(w.them.total - w.them.used, "enemy attacks left")}</div>`;
+  html += `<div class="tiles" style="margin-top:8px">${tile(num(w.us.total - w.us.used), "our attacks left", "gold")}${tile(hit.length ? `${held.length}/${hit.length}` : "–", "bases held", "win")}${tile(w.them.total - w.them.used, "enemy attacks left")}</div>`;
   if (left.length && w.state === "inWar") html += `<h3>Still to attack (${left.length})</h3><div class="labels">${left.map((m) => `<span>${th(m.th, "small")} ${esc(m.name)}</span>`).join("")}</div>`;
   return html + `<h2>Line-up</h2>${lineupTable(w.lineup, w.state === "inWar" ? "no attack yet" : "no attack")}`;
 }
 
 function seasonName(s) {
   const [y, m] = (s || "").split("-");
-  return m ? new Date(+y, +m - 1).toLocaleString(undefined, { month: "long", year: "numeric" }) : s;
+  return m ? new Date(+y, +m - 1).toLocaleString(undefined, { month: "long", year: "numeric" }) : esc(s);
 }
 
 function cwlPage(roundNo) {
@@ -153,7 +153,7 @@ function cwlPage(roundNo) {
       <div class="muted">${r.pct[0].toFixed(1)}% – ${r.pct[1].toFixed(1)}%</div></div>
       <h2>Line-up</h2>${lineupTable(r.lineup, r.state === "inWar" ? "no attack yet" : "no attack")}`;
   }
-  let html = `<div class="tiles">${tile(`#${c.position} of ${c.clans}`, "group position", "gold")}${tile(`${num(c.stars)} ${star}`, "stars")}${tile(num(Math.round(c.destruction)), "destruction")}</div>`;
+  let html = `<div class="tiles">${tile(`#${num(c.position)} of ${num(c.clans)}`, "group position", "gold")}${tile(`${num(c.stars)} ${star}`, "stars")}${tile(num(Math.round(c.destruction)), "destruction")}</div>`;
   html += `<h2>Our rounds</h2><div class="panel rounds">${c.rounds
     .map((r) => { const res = result(r); return `<a href="#/cwl/${r.round}"><b>R${r.round}</b><span class="chip ${res}">${RESULT[res]}</span><span class="opp">${esc(r.opponent)}</span><b>${r.stars[0]} – ${r.stars[1]}</b><span class="muted">${Math.round(r.pct[0])}% – ${Math.round(r.pct[1])}%</span></a>`; })
     .join("")}</div>`;
@@ -214,7 +214,7 @@ function raidsPage(index = 0) {
   setTimeout(() => { document.getElementById("weekend").onchange = (e) => { location.hash = `#/raids/${e.target.value}`; }; });
   return `<p><select id="weekend">${DATA.raids.map((x, i) => `<option value="${i}" ${i === +index ? "selected" : ""}>Weekend of ${when(x.start, { month: "long", day: "numeric" })}</option>`).join("")}</select>
     <span class="muted">${r.state === "ongoing" ? `ends in ${until(r.end)}` : "ended"}</span></p>
-    <div class="tiles">${tile(num(r.loot), "capital gold", "gold")}${tile(r.raids, "raids completed")}${tile(r.districts, "districts destroyed")}${tile(r.attacks, "attacks")}${tile(r.members.length, "raiders")}${tile(num(r.medals), "medals")}</div>
+    <div class="tiles">${tile(num(r.loot), "capital gold", "gold")}${tile(num(r.raids), "raids completed")}${tile(num(r.districts), "districts destroyed")}${tile(r.attacks, "attacks")}${tile(r.members.length, "raiders")}${tile(num(r.medals), "medals")}</div>
     <h2>Raiders</h2>${r.members.length ? table(r.members, [
       { label: "Raider", key: (m) => m.name.toLowerCase(), html: (m) => playerLink(m.tag, m.name) },
       { label: "Attacks", key: (m) => m.attacks, html: (m) => `${m.attacks}/${m.limit}`, num: true },
@@ -232,8 +232,8 @@ function playerPage(tag) {
   for (const [scope, name] of [["all", "All wars"], ["cwl", "CWL"], ["regular", "Regular wars"]]) {
     const s = m.war[scope], d = m.defense[scope];
     if (!s.attacks && !d.attacked) continue;
-    html += `<h3>${name}</h3><div class="tiles">${tile(s.attacks ? pct(s.triples / s.attacks) : "–", "3-star rate", "gold")}${tile(s.attacks, "attacks")}${tile(s.avg_stars.toFixed(2), "avg stars")}${tile(`${Math.round(s.avg_destruction)}%`, "avg destruction")}${tile(s.missed, "missed", s.missed ? "loss" : "")}
-      ${d.attacked ? tile(pct(d.held / d.attacked), "defenses held", d.held * 2 >= d.attacked ? "win" : "loss") + tile(d.attacked, "times attacked") + tile(d.avg_stars.toFixed(2), "stars allowed") : ""}</div>`;
+    html += `<h3>${name}</h3><div class="tiles">${tile(s.attacks ? pct(s.triples / s.attacks) : "–", "3-star rate", "gold")}${tile(num(s.attacks), "attacks")}${tile(s.avg_stars.toFixed(2), "avg stars")}${tile(`${Math.round(s.avg_destruction)}%`, "avg destruction")}${tile(s.missed, "missed", s.missed ? "loss" : "")}
+      ${d.attacked ? tile(pct(d.held / d.attacked), "defenses held", d.held * 2 >= d.attacked ? "win" : "loss") + tile(num(d.attacked), "times attacked") + tile(d.avg_stars.toFixed(2), "stars allowed") : ""}</div>`;
   }
   if (m.recent.length) {
     html += `<h2>Recent attacks</h2>` + table(m.recent, [
