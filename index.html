@@ -3,10 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temu Kahoot</title>
+    <title>Turtdle</title>
+    <meta name="description" content="Sam W's projects: a Clash of Clans clan bot, an iOS workout tracker and a Kahoot clone for family game night." />
+    <script>
+      // Temu Kahoot used to live at the site root; send old #/host and
+      // #/play/CODE links (and their QR codes) to its new home.
+      if (/^#\/(host|play\/)/.test(location.hash)) location.replace('/kahoot/' + location.hash)
+    </script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐢</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/home/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="hero wrap">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/47124703?s=160" alt="" width="80" height="80" />
+      <div>
+        <h1>Turtdle</h1>
+        <p class="lede">Sam W, software engineer. I build small things for my friends, my family and my clan.</p>
+        <p class="links">
+          <a href="https://github.com/Turtdle">GitHub ↗</a>
+          <a href="#projects">Projects ↓</a>
+        </p>
+      </div>
+    </header>
+
+    <main id="projects" class="wrap">
+      <!-- Lovely clan bot: the panel is filled from the bot's hourly data.json -->
+      <article class="project coc">
+        <div class="visual coc-visual" id="coc-live" aria-live="polite">
+          <div class="coc-head">
+            <img class="coc-badge" id="coc-badge" src="/coc/lovely/img/th18.png" alt="" width="56" height="56" />
+            <div>
+              <div class="coc-name">Lovely</div>
+              <div class="coc-sub" id="coc-sub">Clash of Clans clan</div>
+            </div>
+          </div>
+          <div class="war" id="coc-war" hidden></div>
+          <div class="chips" id="coc-chips"></div>
+          <div class="coc-foot" id="coc-foot">Loading live clan data…</div>
+        </div>
+        <div class="body">
+          <p class="kicker">Discord bot · live stats site</p>
+          <h2>Lovely Clan Bot</h2>
+          <p>A Discord bot and live stats site for the Lovely Clash of Clans clan, built on the official Clash of Clans API.</p>
+          <ul>
+            <li>Records every war and CWL attack: 3-star rates, average stars, defense hold rates and lifetime donations for each member.</li>
+            <li>Every command answers with a rendered image card (war line-ups, leaderboards, player profiles) with custom Town Hall badge art.</li>
+            <li>Pings linked members who still have attacks left an hour and 30 minutes before a war ends.</li>
+            <li>Hand-picked war and CWL rosters, plus <code>/makewar</code>, which builds a 5–25 a side line-up from everyone's war preference.</li>
+          </ul>
+          <p class="actions">
+            <a class="btn gold" href="/coc/lovely/">Clan stats site</a>
+            <a class="btn ghost" href="https://discord.gg/8wmVTaMsVR">Join the Discord ↗</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project ws">
+        <div class="visual ws-visual" aria-hidden="true">
+          <img class="ws-icon" src="/home/workout-scribe-icon.png" alt="" width="88" height="88" />
+          <div class="ws-log">
+            <div class="ws-ex">Incline Bench Press <span>30°</span></div>
+            <div class="ws-row"><span>1</span><span>135 lb × 8</span><span class="tick">✓</span></div>
+            <div class="ws-row"><span>2</span><span>135 lb × 8</span><span class="tick gold">✓</span></div>
+            <div class="ws-row"><span>3</span><span>135 lb × 7</span><span class="tick">✓</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <p class="kicker">iPhone app · beta on TestFlight</p>
+          <h2>Workout Scribe</h2>
+          <p>A Strong-style iPhone workout log that knows how strong you should be today, not just what you lifted last time.</p>
+          <ul>
+            <li>Gold "stronger than expected" sets: a set turns gold when it beats what last time predicts.</li>
+            <li>Bench-angle strength curve: log the incline per set, and it converts strength between angles.</li>
+            <li>Fatigue-aware suggestions: exercise order and earlier sets adjust today's targets.</li>
+            <li>Muscle recovery by training split, with a home-screen widget.</li>
+            <li>Built-in rest timer, live on the Lock Screen and in the Dynamic Island.</li>
+            <li>Free iCloud sync, no ads, and import of your history from Strong.</li>
+          </ul>
+          <p class="actions">
+            <a class="btn amber" href="/workoutscribe/">App page</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project kahoot">
+        <div class="visual kahoot-visual">
+          <div class="shapes" aria-hidden="true">
+            <span class="tri"></span><span class="dia"></span><span class="cir"></span>
+          </div>
+          <form class="join" id="kahoot-join">
+            <label for="kahoot-code">Got a game code?</label>
+            <div class="join-row">
+              <input id="kahoot-code" placeholder="CODE" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+              <button type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+        <div class="body">
+          <p class="kicker">Party game · runs in the browser</p>
+          <h2>Temu Kahoot</h2>
+          <p>A Kahoot-style quiz for family game night. There's no server: the host's browser is the game, and phones join peer to peer over WebRTC.</p>
+          <ul>
+            <li>Players join with a 4-letter code that's easy to read aloud across the room.</li>
+            <li>Quizzes are plain CSV files, so a new set is one quick edit on GitHub.</li>
+            <li>Faster right answers score more, with answer bars and a podium at the end.</li>
+          </ul>
+          <p class="actions">
+            <a class="btn purple" href="/kahoot/">Open Temu Kahoot</a>
+            <a class="btn ghost" href="/kahoot/#/host">Host a game</a>
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="wrap">
+      <span>Also: <a href="/legacy-website/">my old website</a> (archive)</span>
+      <span>Built from <a href="https://github.com/Turtdle/turtdle.github.io">Turtdle/turtdle.github.io</a></span>
+    </footer>
+
+    <script type="module" src="/home/main.js"></script>
   </body>
 </html>
