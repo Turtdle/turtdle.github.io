@@ -1,14 +1,15 @@
 import Papa from 'papaparse'
 
-// Quiz sets live in public/quizzes/ with public/quizzes.json as the menu —
-// all fetched at runtime (not bundled), so editing them on github.com
-// redeploys new questions without touching any code.
+// Quiz sets live in public/kahoot/quizzes/ with public/kahoot/quizzes.json
+// as the menu — all fetched at runtime (not bundled), so editing them on
+// github.com redeploys new questions without touching any code.
 // 'no-cache' forces revalidation: GitHub Pages caches assets for 10 minutes,
 // which would otherwise serve stale questions right after an edit.
+const QUIZ_ROOT = import.meta.env.BASE_URL + 'kahoot/'
 
 // Returns [{ name, file }] from quizzes.json.
 export async function loadQuizList() {
-  const res = await fetch(import.meta.env.BASE_URL + 'quizzes.json', { cache: 'no-cache' })
+  const res = await fetch(QUIZ_ROOT + 'quizzes.json', { cache: 'no-cache' })
   if (!res.ok) throw new Error(`Could not load quizzes.json (HTTP ${res.status})`)
   const list = await res.json()
   if (!Array.isArray(list)) throw new Error('quizzes.json must be a JSON array')
@@ -17,7 +18,7 @@ export async function loadQuizList() {
 
 // Returns { questions: [{ text, answers: [a,b,c], correctIndex }], skipped }.
 export async function loadQuestions(file) {
-  const res = await fetch(import.meta.env.BASE_URL + 'quizzes/' + file, { cache: 'no-cache' })
+  const res = await fetch(QUIZ_ROOT + 'quizzes/' + file, { cache: 'no-cache' })
   if (!res.ok) throw new Error(`Could not load quizzes/${file} (HTTP ${res.status})`)
   const text = await res.text()
   const { data } = Papa.parse(text, {
