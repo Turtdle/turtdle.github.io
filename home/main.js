@@ -30,7 +30,7 @@ function ordinal(n) {
 }
 
 function warHtml(w, now) {
-  const label = w.kind === 'cwl' ? `CWL round ${w.round}` : `${w.us.size} v ${w.them.size} war`
+  const label = w.kind === 'cwl' ? `CWL round ${num(w.round)}` : `${num(w.us.size)} v ${num(w.them.size)} war`
   let status
   if (w.state === 'preparation') status = `<span class="pill prep">PREP</span> battle starts in ${span(w.start - now)}`
   else if (w.state === 'inWar') status = `<span class="pill live">LIVE</span> ends in ${span(w.end - now)}`
@@ -44,7 +44,7 @@ function warHtml(w, now) {
       ${s.badge ? `<img src="${esc(s.badge)}" alt="" width="40" height="40" loading="lazy" />` : ''}
       <div class="side-name">${esc(s.name)}</div>
       <div class="stars">${num(s.stars)}<span>★</span></div>
-      <div class="pct">${Number(s.pct || 0).toFixed(1)}% · ${s.used}/${s.total} attacks</div>
+      <div class="pct">${Number(s.pct || 0).toFixed(1)}% · ${num(s.used)}/${num(s.total)} attacks</div>
     </div>`
   return `
     <div class="war-top"><span>${label}</span><span>${status}</span></div>
