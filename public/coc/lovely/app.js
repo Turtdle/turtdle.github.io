@@ -4,6 +4,7 @@
 "use strict";
 
 let DATA = null;
+const DISCORD_INVITE = "https://discord.gg/8wmVTaMsVR";
 
 // ---------------------------------------------------------------- helpers
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -265,7 +266,8 @@ async function main() {
   }
   const c = DATA.clan;
   document.getElementById("top").innerHTML = `${c.badge ? `<img class="badge" src="${esc(c.badge)}" alt="">` : ""}
-    <div><h1>${esc(c.name)}</h1><div class="sub">${esc(c.tag)} · level ${c.level} · ${esc(c.war_league || "")} · ${num(c.win_streak)}-war win streak</div></div>`;
+    <div><h1>${esc(c.name)}</h1><div class="sub">${esc(c.tag)} · level ${c.level} · ${esc(c.war_league || "")} · ${num(c.win_streak)}-war win streak</div></div>
+    <a class="join" href="${DISCORD_INVITE}" target="_blank" rel="noopener">Join our Discord</a>`;
   document.getElementById("foot").innerHTML = `Updated ${ago(DATA.generated_at)} · data from the Clash of Clans API, refreshed hourly.<br>
     This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it.`;
   window.addEventListener("hashchange", route);

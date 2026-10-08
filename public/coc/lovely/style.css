@@ -23,6 +23,12 @@ header {
 header img.badge { width: 84px; height: 84px; }
 header h1 { margin: 0; color: var(--gold); font-size: 30px; }
 header .sub { color: var(--muted); font-size: 14px; }
+header > div { flex: 1; min-width: 0; }
+header .join {
+  margin-left: auto; padding: 10px 18px; border-radius: 999px; white-space: nowrap;
+  background: var(--live); color: #fff; font-weight: 600;
+}
+header .join:hover { color: #fff; filter: brightness(1.12); }
 
 nav {
   position: sticky; top: 0; z-index: 5; background: var(--bg);
@@ -81,6 +87,8 @@ select { background: var(--panel); color: var(--text); border: 1px solid var(--e
 footer { max-width: 980px; margin: 30px auto; padding: 0 16px 30px; color: var(--muted); font-size: 12px; text-align: center; }
 
 @media (max-width: 600px) {
+  header { flex-wrap: wrap; }
+  header .join { margin-left: 0; width: 100%; text-align: center; }
   header img.badge { width: 60px; height: 60px; }
   header h1 { font-size: 24px; }
   .score .big { font-size: 30px; }
