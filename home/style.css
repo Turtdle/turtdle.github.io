@@ -164,6 +164,7 @@ h2 { font: 750 30px/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 10p
 .ws-ex span { color: #b9ad94; font-weight: 600; }
 .ws-row { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; padding: 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.07); }
 .ws-row > span:first-child { color: #9b917c; }
+.beat { font-style: normal; font-size: 12px; font-weight: 700; color: #e8b84a; margin-left: 6px; }
 .tick {
   width: 24px;
   height: 24px;
