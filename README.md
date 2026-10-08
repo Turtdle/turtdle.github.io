@@ -6,25 +6,21 @@ My website, a static site built with Vite and deployed to GitHub Pages.
 | --- | --- | --- |
 | [`/`](https://turtdle.github.io/) | Homepage: project cards, including a live Lovely clan war panel and a Kahoot join box | [`index.html`](index.html), [`home/`](home/) |
 | [`/kahoot/`](https://turtdle.github.io/kahoot/) | Temu Kahoot (see below) | [`kahoot/`](kahoot/), quizzes in [`public/kahoot/`](public/kahoot/) |
-| [`/coc/lovely/`](https://turtdle.github.io/coc/lovely/) | Lovely clan stats site | [`public/coc/lovely/`](public/coc/lovely/), **published hourly by the clan bot; don't edit by hand** |
+| [`/coc/lovely/`](https://turtdle.github.io/coc/lovely/) | Lovely clan stats site | separate repo [Turtdle/coc](https://github.com/Turtdle/coc), published hourly by the clan bot |
 | [`/workoutscribe/`](https://turtdle.github.io/workoutscribe/) | Workout Scribe app page | separate repo [Turtdle/workoutscribe](https://github.com/Turtdle/workoutscribe) |
 | [`/legacy-website/`](https://turtdle.github.io/legacy-website/) | The old personal site | separate repo [Turtdle/legacy-website](https://github.com/Turtdle/legacy-website) |
 
 The homepage reads `/coc/lovely/data.json` (the clan bot's export) for its
 live war panel, and falls back to static text if that fetch fails.
 
-### Rules that keep the clan bot's publisher working
+### The clan site lives in its own repo
 
-The bot (`site_publish.py` in the private coc-clan-bot repo) keeps a sparse
-clone of only `public/coc/lovely/`, commits as "Lovely clan bot", and pushes
-to `main` about once an hour. So:
+The clan bot publishes `/coc/lovely/` to [Turtdle/coc](https://github.com/Turtdle/coc);
+GitHub Pages serves a repo named `coc` at `/coc/`, ahead of this site. That way the
+bot's deploy key can only write to that repo, not to this one. So:
 
-- Always `git pull --rebase` before pushing. Bot commits land all the time.
-- Keep the branch `main`, keep Vite's default `publicDir` and `base: '/'`,
-  and don't add a `paths` filter to the deploy workflow. Every bot commit
-  needs to redeploy.
-- Don't add SPA fallbacks, a service worker or a root `404.html` that could
-  swallow `/coc/lovely/`.
+- Don't put anything under `/coc/` in this repo; it would be shadowed.
+- Don't add a service worker that could swallow `/coc/lovely/`.
 
 ## Temu Kahoot — a tiny Kahoot clone
 
@@ -115,7 +111,7 @@ Open `http://localhost:5173/` for the homepage and
 `http://localhost:5173/kahoot/#/host` to host a game; join from another tab
 (or your phone). Multiplayer works from localhost — signaling goes through
 the free PeerJS cloud, so you need internet either way. Locally the homepage's
-live clan panel shows whatever `public/coc/lovely/data.json` you last pulled.
+live clan panel falls back to static text (the clan data lives in Turtdle/coc).
 
 `npm run build && npm run preview` serves the production build at
 `http://localhost:4173/` to sanity-check before deploying.
