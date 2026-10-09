@@ -111,6 +111,7 @@ h2 { font: 750 30px/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 10p
 .btn.gold { background: #f5c518; color: #17140a; }
 .btn.amber { background: #d9a43a; color: #1d1404; }
 .btn.purple { background: #46178f; color: #fff; }
+.btn .discord { width: 18px; height: 18px; margin: -2px 8px 0 0; vertical-align: middle; fill: #5865f2; }
 
 /* --- Lovely clan bot panel (matches the clan site's palette) --- */
 .coc { --card-accent: #d4a514; }
