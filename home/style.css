@@ -109,7 +109,8 @@ h2 { font: 750 30px/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 10p
 .btn.ghost { color: var(--ink); border: 1px solid var(--line); }
 .btn.ghost:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
 .btn.gold { background: #f5c518; color: #17140a; }
-.btn.amber { background: #d9a43a; color: #1d1404; }
+.btn.ink { background: #5c4226; color: #fbf3e2; }
+@media (prefers-color-scheme: dark) { .btn.ink { background: #e9dbbb; color: #3b2a1a; } }
 .btn.purple { background: #46178f; color: #fff; }
 .btn .discord { width: 18px; height: 18px; margin: -2px 8px 0 0; vertical-align: middle; fill: #5865f2; }
 
@@ -144,28 +145,31 @@ h2 { font: 750 30px/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 10p
 .chip span { font-size: 11px; color: #8c8e96; }
 .coc-foot { font-size: 12px; color: #6f717a; }
 
-/* --- Workout Scribe panel (app icon colours) --- */
-.ws { --card-accent: #b8892a; }
+/* --- Workout Scribe panel (the sketchbook app icon: brown ink on aged paper) --- */
+.ws { --card-accent: #8a6a3f; }
 .ws-visual {
-  background: radial-gradient(120% 90% at 30% 20%, #3a2a12 0%, #1a1309 60%, #120d06 100%);
-  color: #f5efe2;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(92, 66, 38, 0.09) 27px 28px),
+    radial-gradient(120% 90% at 30% 20%, #f4ead4 0%, #e9dbbb 60%, #ddc9a2 100%);
+  color: #3b2a1a;
   align-items: center;
 }
-.ws-icon { width: 88px; height: 88px; border-radius: 21px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); }
+.ws-icon { width: 88px; height: 88px; border-radius: 21px; box-shadow: 0 8px 24px rgba(74, 52, 26, 0.35), 0 0 0 1px rgba(74, 52, 26, 0.15); }
 .ws-log {
   width: 100%;
   max-width: 300px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 251, 240, 0.7);
+  border: 1.5px solid #5c4226;
   border-radius: 14px;
   padding: 10px 12px;
   font-size: 14px;
+  box-shadow: 3px 3px 0 rgba(92, 66, 38, 0.18);
 }
-.ws-ex { font-weight: 700; color: #e8b84a; margin-bottom: 4px; display: flex; justify-content: space-between; }
-.ws-ex span { color: #b9ad94; font-weight: 600; }
-.ws-row { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; padding: 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.07); }
-.ws-row > span:first-child { color: #9b917c; }
-.beat { font-style: normal; font-size: 12px; font-weight: 700; color: #e8b84a; margin-left: 6px; }
+.ws-ex { font-weight: 700; color: #3b2a1a; margin-bottom: 4px; display: flex; justify-content: space-between; }
+.ws-ex span { color: #8a6a3f; font-weight: 600; }
+.ws-row { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; padding: 5px 0; border-top: 1px dashed rgba(92, 66, 38, 0.3); }
+.ws-row > span:first-child { color: #8a6a3f; }
+.beat { font-style: normal; font-size: 12px; font-weight: 700; color: #9a6a12; margin-left: 6px; }
 .tick {
   width: 24px;
   height: 24px;
@@ -180,7 +184,7 @@ h2 { font: 750 30px/1.1 var(--display); letter-spacing: -0.02em; margin: 0 0 10p
 .tick.gold {
   background: linear-gradient(135deg, #fff1b8 0%, #e8b84a 35%, #a8741a 70%, #f3d27a 100%);
   color: #3b2804;
-  box-shadow: 0 0 14px rgba(232, 184, 74, 0.55);
+  box-shadow: 0 0 12px rgba(201, 146, 40, 0.6);
 }
 
 /* --- Temu Kahoot panel --- */
