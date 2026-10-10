@@ -3,8 +3,8 @@
 
 // --- Desktop: drop the cards into the well like (rectangular) Tetris pieces ---
 // The inline script in index.html adds .drop on desktop unless reduced motion
-// is on. Pieces land bottom row first, spawn centred above the well, get
-// nudged sideways one column at a time, and fall in whole-cell steps.
+// is on. Pieces land bottom row first, each falling straight down its own
+// column in whole-cell steps.
 const CELL = 40 // px per gravity step (matches the well's grid)
 const TICK = 30 // ms per gravity step
 const LOCK_PAUSE = 110 // ms between a piece locking and the next one spawning
@@ -13,11 +13,7 @@ function tetrisDrop() {
   const root = document.documentElement
   if (!root.classList.contains('drop')) return
   const well = document.querySelector('main')
-  const cs = getComputedStyle(well)
-  const box = well.getBoundingClientRect()
-  const left = box.left + parseFloat(cs.paddingLeft)
-  const width = well.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)
-  const column = (width + parseFloat(cs.columnGap)) / 12
+  const top = well.getBoundingClientRect().top
 
   const pieces = [...well.querySelectorAll('.project')]
     .map((card) => ({ card, r: card.getBoundingClientRect() }))
@@ -25,18 +21,12 @@ function tetrisDrop() {
 
   let delay = 0
   const landings = pieces.map(({ card, r }) => {
-    const fall = r.bottom - box.top + 40 // start above the well's mouth, shadow included
-    const spawn = left + Math.round((width - r.width) / 2 / column) * column
-    const dx = spawn - r.left
-    const moves = Math.round(Math.abs(dx) / column)
+    const fall = r.bottom - top + 40 // start above the well's mouth, shadow included
     const steps = Math.max(6, Math.ceil(fall / CELL))
-    const every = moves * 2 < steps ? 2 : 1 // tap sideways every other tick
     const keyframes = []
     for (let k = 0; k <= steps; k++) {
-      const shifted = Math.min(moves, Math.floor(k / every))
-      const x = k === steps ? 0 : dx - Math.sign(dx) * shifted * column
       const y = k === steps ? 0 : Math.round(-fall + (fall * k) / steps)
-      keyframes.push({ transform: `translate(${x}px, ${y}px)`, easing: 'steps(1, end)' })
+      keyframes.push({ transform: `translateY(${y}px)`, easing: 'steps(1, end)' })
     }
     const anim = card.animate(keyframes, { duration: steps * TICK, delay, fill: 'backwards' })
     delay += steps * TICK + LOCK_PAUSE
