@@ -9,6 +9,13 @@
       // Temu Kahoot used to live at the site root; send old #/host and
       // #/play/CODE links (and their QR codes) to its new home.
       if (/^#\/(host|play\/)/.test(location.hash)) location.replace('/kahoot/' + location.hash)
+      // Desktop one-screen layout: hide the cards until home/main.js drops
+      // them in like Tetris pieces. Keep this query in sync with style.css.
+      // Skipped for reduced motion (e.g. Windows "Animation effects" off)
+      // unless the URL has ?drop.
+      if (matchMedia('(min-width: 1200px) and (min-height: 680px)').matches &&
+          (!matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]drop\b/.test(location.search)))
+        document.documentElement.classList.add('drop')
     </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐢</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +33,7 @@
         <p class="lede">Software/AI development engineer</p>
         <p class="links">
           <a href="https://github.com/Turtdle">GitHub ↗</a>
-          <a href="#projects">Projects ↓</a>
+          <a class="to-projects" href="#projects">Projects ↓</a>
         </p>
       </div>
     </header>
@@ -49,16 +56,17 @@
         <div class="body">
           <p class="kicker">Discord bot · live stats site</p>
           <h2>Lovely Clan Bot</h2>
-          <p>A Discord bot and live stats site for the Lovely Clash of Clans clan, built on the official Clash of Clans API.</p>
-          <ul>
-            <li>Records every war and CWL attack: 3-star rates, average stars, defense hold rates and lifetime donations for each member.</li>
-            <li>Every command answers with a rendered image card (war line-ups, leaderboards, player profiles) with custom Town Hall badge art.</li>
-            <li>Pings linked members who still have attacks left an hour and 30 minutes before a war ends.</li>
-            <li>Hand-picked war and CWL rosters, plus <code>/makewar</code>, which builds a 5–25 a side line-up from everyone's war preference.</li>
-          </ul>
+          <div class="details">
+            <p>A Discord bot and live stats site for the Lovely Clash of Clans clan, built on the official Clash of Clans API.</p>
+            <ul>
+              <li>Records every war and CWL attack: 3-star rates, average stars, defense hold rates and lifetime donations for each member.</li>
+              <li>Every command answers with a rendered image card (war line-ups, leaderboards, player profiles) with custom Town Hall badge art.</li>
+              <li>Pings linked members who still have attacks left an hour and 30 minutes before a war ends.</li>
+              <li>Hand-picked war and CWL rosters, plus <code>/makewar</code>, which builds a 5–25 a side line-up from everyone's war preference.</li>
+            </ul>
+          </div>
           <p class="actions">
             <a class="btn gold" href="/coc/lovely/">Clan stats site</a>
-            <a class="btn ghost" href="https://discord.gg/8wmVTaMsVR"><svg class="discord" aria-hidden="true" focusable="false"><use href="#discord-logo"/></svg>Join the Discord ↗</a>
           </p>
         </div>
       </article>
@@ -69,22 +77,24 @@
           <div class="ws-log">
             <div class="ws-ex">Incline Bench Press <span>30°</span></div>
             <div class="ws-row"><span>1</span><span>135 lb × 8</span><span class="tick">✓</span></div>
-            <div class="ws-row"><span>2</span><span>135 lb × 8 <em class="beat">+3% vs expected</em></span><span class="tick gold">✓</span></div>
+            <div class="ws-row"><span>2</span><span>135 lb × 8 <em class="beat">+3%<span class="beat-long"> vs expected</span></em></span><span class="tick gold">✓</span></div>
             <div class="ws-row"><span>3</span><span>135 lb × 7</span><span class="tick">✓</span></div>
           </div>
         </div>
         <div class="body">
           <p class="kicker">iPhone app · beta on TestFlight</p>
           <h2>Workout Scribe</h2>
-          <p>A Strong-style iPhone workout log that knows how strong you should be today, not just what you lifted last time.</p>
-          <ul>
-            <li>Gold sets that mean something: each set is compared with what you should lift today, adjusted for bench angle and for fatigue from earlier exercises.</li>
-            <li>Bench-angle strength curve: incline sets convert to a flat-bench equivalent, so 30° and flat progress share one chart.</li>
-            <li>Fatigue-aware suggestions: it estimates strength lost to exercise order, based on published research, and sets targets to match last time or beat it by the smallest step to gold.</li>
-            <li>Muscle recovery for main and helper muscles, grouped by your split (PPL, Upper/Lower, Arnold…), with a home-screen widget.</li>
-            <li>A rest timer built into the set, with a Lock Screen and Dynamic Island Live Activity.</li>
-            <li>Free iCloud sync with no account and no ads, plus Strong import, a plate calculator and automatic warm-up sets.</li>
-          </ul>
+          <div class="details">
+            <p>A Strong-style iPhone workout log that knows how strong you should be today, not just what you lifted last time.</p>
+            <ul>
+              <li>Gold sets that mean something: each set is compared with what you should lift today, adjusted for bench angle and for fatigue from earlier exercises.</li>
+              <li>Bench-angle strength curve: incline sets convert to a flat-bench equivalent, so 30° and flat progress share one chart.</li>
+              <li>Fatigue-aware suggestions: it estimates strength lost to exercise order, based on published research, and sets targets to match last time or beat it by the smallest step to gold.</li>
+              <li>Muscle recovery for main and helper muscles, grouped by your split (PPL, Upper/Lower, Arnold…), with a home-screen widget.</li>
+              <li>A rest timer built into the set, with a Lock Screen and Dynamic Island Live Activity.</li>
+              <li>Free iCloud sync with no account and no ads, plus Strong import, a plate calculator and automatic warm-up sets.</li>
+            </ul>
+          </div>
           <p class="actions">
             <a class="btn ink" href="/workoutscribe/">App page</a>
           </p>
@@ -107,12 +117,14 @@
         <div class="body">
           <p class="kicker">Party game · runs in the browser</p>
           <h2>Temu Kahoot</h2>
-          <p>A Kahoot-style quiz for family game night. There's no server: the host's browser is the game, and phones join peer to peer over WebRTC.</p>
-          <ul>
-            <li>Players join with a 4-letter code that's easy to read aloud across the room.</li>
-            <li>Quizzes are plain CSV files, so a new set is one quick edit on GitHub.</li>
-            <li>Faster right answers score more, with answer bars and a podium at the end.</li>
-          </ul>
+          <div class="details">
+            <p>A Kahoot-style quiz for family game night. There's no server: the host's browser is the game, and phones join peer to peer over WebRTC.</p>
+            <ul>
+              <li>Players join with a 4-letter code that's easy to read aloud across the room.</li>
+              <li>Quizzes are plain CSV files, so a new set is one quick edit on GitHub.</li>
+              <li>Faster right answers score more, with answer bars and a podium at the end.</li>
+            </ul>
+          </div>
           <p class="actions">
             <a class="btn purple" href="/kahoot/">Open Temu Kahoot</a>
             <a class="btn ghost" href="/kahoot/#/host">Host a game</a>
@@ -138,14 +150,16 @@
         <div class="body">
           <p class="kicker">Discord Activity · daily web game</p>
           <h2>BrickPoint</h2>
-          <p>A daily LEGO price-guessing game you play in a Discord call or in the browser. Every day brings five sets from one release year. Guess what each one cost at launch.</p>
-          <p class="credit"><b>Credit:</b> the idea comes from <a href="https://pricepoint.gg">PricePoint</a>, the original daily "guess what it sold for" game. BrickPoint started as a Discord Activity for PricePoint, and this LEGO edition borrows its format and scoring. Go play the original at <a href="https://pricepoint.gg">pricepoint.gg ↗</a></p>
-          <ul>
-            <li>Five LEGO sets a day, spread across price tiers, with set data from Brickset.</li>
-            <li>Everyone plays at their own pace. A live sidebar shows how each friend in the channel did on every round, but never their guesses.</li>
-            <li>Up to 5,000 points a round, depending on how close you get. Revealing the piece count costs 20% of that round.</li>
-            <li>The bot posts a results card to the channel as people finish, plus a daily recap with streaks and monthly standings.</li>
-          </ul>
+          <div class="details">
+            <p>A daily LEGO price-guessing game you play in a Discord call or in the browser. Every day brings five sets from one release year. Guess what each one cost at launch.</p>
+            <p class="credit"><b>Credit:</b> the idea comes from <a href="https://pricepoint.gg">PricePoint</a>, the original daily "guess what it sold for" game. BrickPoint started as a Discord Activity for PricePoint, and this LEGO edition borrows its format and scoring. Go play the original at <a href="https://pricepoint.gg">pricepoint.gg ↗</a></p>
+            <ul>
+              <li>Five LEGO sets a day, spread across price tiers, with set data from Brickset.</li>
+              <li>Everyone plays at their own pace. A live sidebar shows how each friend in the channel did on every round, but never their guesses.</li>
+              <li>Up to 5,000 points a round, depending on how close you get. Revealing the piece count costs 20% of that round.</li>
+              <li>The bot posts a results card to the channel as people finish, plus a daily recap with streaks and monthly standings.</li>
+            </ul>
+          </div>
           <p class="actions">
             <a class="btn brick-yellow" href="https://ezikbrhxwq.us-east-1.awsapprunner.com/">Play in the browser</a>
             <a class="btn ghost" href="https://discord.com/activities/1547746975460368445"><svg class="discord" aria-hidden="true" focusable="false"><use href="#discord-logo"/></svg>Play in Discord ↗</a>
