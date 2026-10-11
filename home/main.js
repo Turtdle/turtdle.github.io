@@ -2,9 +2,8 @@
 // the Kahoot join box.
 
 // --- Desktop: drop the cards into the well like (rectangular) Tetris pieces ---
-// The inline script in index.html adds .drop on desktop unless reduced motion
-// is on. Pieces land bottom row first, each falling straight down its own
-// column in whole-cell steps.
+// The inline script in index.html adds .drop on desktop. Pieces land bottom
+// row first, each falling straight down its own column in whole-cell steps.
 const CELL = 40 // px per gravity step (matches the well's grid)
 const TICK = 30 // ms per gravity step
 const LOCK_PAUSE = 110 // ms between a piece locking and the next one spawning

@@ -11,10 +11,9 @@
       if (/^#\/(host|play\/)/.test(location.hash)) location.replace('/kahoot/' + location.hash)
       // Desktop one-screen layout: hide the cards until home/main.js drops
       // them in like Tetris pieces. Keep this query in sync with style.css.
-      // Skipped for reduced motion (e.g. Windows "Animation effects" off)
-      // unless the URL has ?drop.
-      if (matchMedia('(min-width: 1200px) and (min-height: 680px)').matches &&
-          (!matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]drop\b/.test(location.search)))
+      // Plays even with reduced motion on: Sam's call, since it's a short,
+      // calm, vertical-only drop.
+      if (matchMedia('(min-width: 1200px) and (min-height: 680px)').matches)
         document.documentElement.classList.add('drop')
     </script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐢</text></svg>" />
