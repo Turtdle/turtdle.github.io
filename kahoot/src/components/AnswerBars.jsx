@@ -1,8 +1,8 @@
-const SHAPES = ['▲', '◆', '●']
+import Shape from './Shape.jsx'
 
 // Kahoot-style answer distribution: one bar per answer in that answer's
-// color, count labeled above in plain ink, shape below so identity is never
-// color-alone. Bars anchor to the baseline; wrong answers are dimmed.
+// colour, count labelled above in plain ink, shape below so identity is never
+// colour-alone. Bars anchor to the baseline; wrong answers are dimmed.
 export default function AnswerBars({ counts, correctIndex }) {
   const max = Math.max(...counts, 1)
   return (
@@ -16,7 +16,10 @@ export default function AnswerBars({ counts, correctIndex }) {
               style={{ height: `${Math.max((count / max) * 100, 4)}%` }}
             />
           </div>
-          <span className="bar-shape">{SHAPES[i]}</span>
+          <span className={`bar-shape a${i}-ink`}>
+            <Shape i={i} size={18} />
+            {i === correctIndex && <span className="bar-tick">✓</span>}
+          </span>
         </div>
       ))}
     </div>

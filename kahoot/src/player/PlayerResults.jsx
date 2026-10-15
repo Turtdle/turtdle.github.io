@@ -1,61 +1,53 @@
+import Screen from '../components/Screen.jsx'
 import Leaderboard from '../components/Leaderboard.jsx'
 import AnswerBars from '../components/AnswerBars.jsx'
 
 export default function PlayerResults({ snapshot, me, myId }) {
   const gameover = snapshot.phase === 'gameover'
-  const rank = snapshot.players.findIndex((p) => p.id === myId) + 1
+  const rank = snapshot.players.findIndex((p) => p.pid === myId) + 1
+  const total = snapshot.players.length
 
-  let verdict
-  if (!me) {
-    verdict = null
-  } else if (me.lastCorrect === true) {
-    verdict = (
-      <>
-        <p className="big-emoji">✅</p>
-        <p className="verdict correct-text">Correct! +{me.lastGain}</p>
-      </>
-    )
-  } else if (me.lastCorrect === false) {
-    verdict = (
-      <>
-        <p className="big-emoji">❌</p>
-        <p className="verdict wrong-text">Wrong…</p>
-      </>
-    )
-  } else {
-    verdict = (
-      <>
-        <p className="big-emoji">🤷</p>
-        <p className="verdict">No answer</p>
-      </>
-    )
+  let verdict = null
+  if (me && !gameover) {
+    if (me.lastCorrect === true) verdict = { tone: 'good', emoji: '✅', text: 'Correct!', extra: `+${me.lastGain}` }
+    else if (me.lastCorrect === false) verdict = { tone: 'bad', emoji: '❌', text: 'Not this time' }
+    else verdict = { tone: 'none', emoji: '⏱️', text: 'No answer' }
   }
 
   return (
-    <div className="page center">
+    <Screen>
       {gameover ? (
-        <h1 className="logo">🏆 Game over!</h1>
+        <div className="final-rank">
+          <p className="big-emoji">{rank === 1 ? '🏆' : rank <= 3 ? '🎉' : '👏'}</p>
+          <h1 className="hero-title">{rank > 0 ? `You finished #${rank} of ${total}` : 'Game over!'}</h1>
+          {me && <p className="hero-sub">{me.score} points</p>}
+        </div>
       ) : (
-        <>
-          <div className="status-box">{verdict}</div>
-          {snapshot.answerCounts && (
-            <AnswerBars counts={snapshot.answerCounts} correctIndex={snapshot.correctAnswerIndex} />
-          )}
-        </>
+        verdict && (
+          <div className={`verdict ${verdict.tone}`}>
+            <span className="verdict-emoji">{verdict.emoji}</span>
+            <span className="verdict-text">{verdict.text}</span>
+            {verdict.extra && <span className="verdict-gain">{verdict.extra}</span>}
+          </div>
+        )
       )}
 
-      {me && rank > 0 && (
+      {!gameover && snapshot.answerCounts && (
+        <AnswerBars counts={snapshot.answerCounts} correctIndex={snapshot.correctAnswerIndex} />
+      )}
+
+      {!gameover && me && rank > 0 && (
         <p className="rank-line">
-          You're <strong>#{rank}</strong> with <strong>{me.score}</strong> points
+          You&rsquo;re <strong>#{rank}</strong> with <strong>{me.score}</strong> points
         </p>
       )}
 
-      <div className="card">
+      <section className="card">
         <h2>{gameover ? 'Final standings' : 'Leaderboard'}</h2>
-        <Leaderboard players={snapshot.players} showGains={!gameover} myId={myId} />
-      </div>
+        <Leaderboard players={snapshot.players} showGains={!gameover} myId={myId} limit={gameover ? 0 : 5} />
+      </section>
 
-      {!gameover && <p className="muted next-note">Waiting for the host to continue…</p>}
-    </div>
+      {!gameover && <p className="muted-light center-text">Waiting for the host to continue…</p>}
+    </Screen>
   )
 }

@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import { Peer } from 'peerjs'
-import { PEER_PREFIX, CONNECT_TIMEOUT_MS } from '../config.js'
+import { CONNECT_TIMEOUT_MS, PEER_PREFIX, PROTOCOL } from '../config.js'
+import { newToken } from '../lib/gameCode.js'
+import { describePeerError, HOST_UNREACHABLE, isMessage, peerOptions, webrtcSupported, WEBRTC_OFF } from '../lib/net.js'
 
 // Player side: one peer, one connection to the host, and the last state
 // snapshot the host sent. The UI is a pure render of that snapshot.
 //
-// status: 'connecting' | 'connected' | 'failed' (never reached host)
-//         | 'ended' (host gone after we were in)
-// Returns { snapshot, status, myId, myAnswer, sendAnswer, retry }.
+// status: 'connecting' | 'connected' (host accepted us) | 'failed' (never got in)
+//         | 'removed' (host turned us away) | 'ended' (host gone after we were in)
+// Returns { snapshot, status, error, myId, myAnswer, sendAnswer, retry }.
 export function usePlayerConnection(code, name) {
   const [snapshot, setSnapshot] = useState(null)
   const [status, setStatus] = useState('connecting')
+  const [error, setError] = useState(null) // { title, detail }
   const [myId, setMyId] = useState(null)
   const [myAnswer, setMyAnswer] = useState(null) // { questionIndex, answerIndex }
   const [attempt, setAttempt] = useState(0)
@@ -19,43 +22,43 @@ export function usePlayerConnection(code, name) {
   useEffect(() => {
     if (!code || !name) return
     setStatus('connecting')
+    setError(null)
     setSnapshot(null)
     setMyAnswer(null)
+    if (!webrtcSupported()) {
+      setStatus('failed')
+      setError(WEBRTC_OFF)
+      return
+    }
 
-    const peer = new Peer() // random cloud-assigned ID; doubles as our player ID
-    let opened = false
-    let failed = false
+    const token = gameToken(code)
+    const peer = new Peer(peerOptions()) // random cloud-assigned ID
+    let joined = false
+    let done = false // failed or turned away: ignore everything after
     let reconnectTimer = null
     let reconnectAttempts = 0
 
-    function fail() {
-      if (opened || failed) return
-      failed = true
+    function fail(reason) {
+      if (joined || done) return
+      done = true
       clearTimeout(failTimeout)
       setStatus('failed')
+      setError(reason)
       peer.destroy()
     }
 
-    const failTimeout = setTimeout(fail, CONNECT_TIMEOUT_MS)
+    const failTimeout = setTimeout(() => fail(HOST_UNREACHABLE), CONNECT_TIMEOUT_MS)
 
-    peer.on('open', (id) => {
-      setMyId(id)
+    peer.on('open', () => {
       reconnectAttempts = 0
       // 'open' re-fires after every signaling reconnect. The DataConnection to
-      // the host survives those, so never open a second one (a duplicate join
-      // would reset this player on the host).
+      // the host survives those, so never open a second one.
       if (connRef.current) return
-      const conn = peer.connect(PEER_PREFIX + code, {
-        reliable: true,
-        serialization: 'json',
-      })
+      const conn = peer.connect(PEER_PREFIX + code, { reliable: true, serialization: 'json' })
       connRef.current = conn
 
       conn.on('open', () => {
-        opened = true
-        clearTimeout(failTimeout)
-        setStatus('connected')
-        conn.send({ type: 'join', name })
+        conn.send({ t: 'hello', v: PROTOCOL, name, token })
         // PeerJS 'close' is unreliable when the host tab dies abruptly —
         // watch the ICE state as a fallback ('disconnected' is skipped so a
         // wifi blip doesn't end the game for this player).
@@ -63,29 +66,46 @@ export function usePlayerConnection(code, name) {
         if (pc) {
           pc.addEventListener('iceconnectionstatechange', () => {
             const state = pc.iceConnectionState
-            if (state === 'failed' || state === 'closed') setStatus('ended')
+            if ((state === 'failed' || state === 'closed') && joined && !done) setStatus('ended')
           })
         }
       })
       conn.on('data', (msg) => {
-        if (msg && msg.type === 'state') setSnapshot(msg)
+        if (done || !isMessage(msg)) return
+        if (msg.t === 'welcome' && typeof msg.pid === 'string') {
+          joined = true
+          clearTimeout(failTimeout)
+          setMyId(msg.pid)
+          setStatus('connected')
+        } else if (msg.t === 'state' && joined) {
+          setSnapshot(msg)
+          if (msg.phase === 'lobby') setMyAnswer(null) // "Play again" starts over at question 1
+
+        } else if (msg.t === 'bye') {
+          done = true
+          clearTimeout(failTimeout)
+          setStatus('removed')
+          setError(BYE[msg.reason] || BYE.bad)
+          if (msg.reason === 'kicked') forgetGame(code)
+        }
       })
       conn.on('close', () => {
-        if (opened) setStatus('ended')
-        else fail()
+        if (done) return
+        if (joined) setStatus('ended')
+        else fail(HOST_UNREACHABLE)
       })
     })
 
-    // 'peer-unavailable' (bad code / host gone) and friends. Errors after
-    // we're in are left to the connection close handler.
-    peer.on('error', () => {
-      if (!opened) fail()
+    // 'peer-unavailable' (bad code / host gone), blocked signaling server and
+    // friends. Errors after we're in are left to the connection close handler.
+    peer.on('error', (err) => {
+      if (!joined) fail(describePeerError(err.type, code))
     })
 
     // Signaling loss doesn't break the live game connection; retry with
     // capped backoff so an outage doesn't become a hammering loop.
     peer.on('disconnected', () => {
-      if (!opened || peer.destroyed) return
+      if (!joined || peer.destroyed) return
       clearTimeout(reconnectTimer)
       reconnectTimer = setTimeout(() => {
         if (!peer.destroyed && peer.disconnected) peer.reconnect()
@@ -98,6 +118,7 @@ export function usePlayerConnection(code, name) {
     window.addEventListener('pagehide', onPageHide)
 
     return () => {
+      done = true
       clearTimeout(failTimeout)
       clearTimeout(reconnectTimer)
       window.removeEventListener('pagehide', onPageHide)
@@ -109,7 +130,7 @@ export function usePlayerConnection(code, name) {
   function sendAnswer(questionIndex, answerIndex) {
     const conn = connRef.current
     if (conn && conn.open) {
-      conn.send({ type: 'answer', questionIndex, answerIndex })
+      conn.send({ t: 'answer', q: questionIndex, a: answerIndex })
       setMyAnswer({ questionIndex, answerIndex })
     }
   }
@@ -117,9 +138,70 @@ export function usePlayerConnection(code, name) {
   return {
     snapshot,
     status,
+    error,
     myId,
     myAnswer,
     sendAnswer,
     retry: () => setAttempt((a) => a + 1),
+  }
+}
+
+const BYE = {
+  kicked: { title: 'The host removed you from the game', detail: null },
+  locked: { title: "This game isn't taking new players", detail: 'Ask the host to unlock the lobby.' },
+  full: { title: 'This game is full', detail: null },
+  version: { title: 'This game is on a different version', detail: 'Refresh the page and try again.' },
+  bad: { title: "Couldn't join with that name", detail: 'Try a different name.' },
+}
+
+// The rejoin token and name for each game live in this tab's sessionStorage,
+// so a refresh or a locked phone puts you straight back in with your score.
+const tokenKey = (code) => `kahoot-token-${code}`
+const nameKey = (code) => `kahoot-name-${code}`
+
+function gameToken(code) {
+  try {
+    let token = sessionStorage.getItem(tokenKey(code))
+    if (!token) {
+      token = newToken()
+      sessionStorage.setItem(tokenKey(code), token)
+    }
+    return token
+  } catch {
+    return newToken() // storage blocked: still playable, just no rejoin after a refresh
+  }
+}
+
+export function savedName(code) {
+  try {
+    return sessionStorage.getItem(nameKey(code))
+  } catch {
+    return null
+  }
+}
+
+export function saveName(code, name) {
+  try {
+    sessionStorage.setItem(nameKey(code), name)
+    localStorage.setItem('kahoot-last-name', name)
+  } catch {
+    // Storage blocked — fine, just no auto-rejoin.
+  }
+}
+
+export function lastName() {
+  try {
+    return localStorage.getItem('kahoot-last-name') || ''
+  } catch {
+    return ''
+  }
+}
+
+function forgetGame(code) {
+  try {
+    sessionStorage.removeItem(tokenKey(code))
+    sessionStorage.removeItem(nameKey(code))
+  } catch {
+    // nothing to forget
   }
 }

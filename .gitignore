@@ -2,3 +2,6 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# Temu Kahoot preset quizzes in plain text (npm run presets:unlock); only the encrypted file is published
+kahoot/presets/
